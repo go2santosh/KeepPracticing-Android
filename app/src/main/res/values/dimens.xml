@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size_large">28sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
     <dimen name="text_size_medium">21sp</dimen>
+    <dimen name="text_size_large">28sp</dimen>
     <dimen name="margin_top">64sp</dimen>
     <dimen name="padding_small">8sp</dimen>
+    <dimen name="padding_large">32sp</dimen>
+    <dimen name="margin_medium">16sp</dimen>
+    <dimen name="navigation_layout_height">62sp</dimen>
 </resources>
