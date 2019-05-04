@@ -1,9 +1,10 @@
-package com.go2santosh.keeppracticing
+package com.go2santosh.keeppracticing.userinterfaces
 
 import kotlinx.android.synthetic.main.activity_main.*
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import com.go2santosh.keeppracticing.R
 
 class MainActivity : Activity() {
 
@@ -12,7 +13,7 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
         textViewCaption.text = getString(R.string.keep_practicing)
         buttonStart.text = getString(R.string.start)
-        buttonStart.run { setOnClickListener { startQuiz() } }
+        buttonStart.apply { setOnClickListener { startQuiz() } }
     }
 
     private fun startQuiz() {

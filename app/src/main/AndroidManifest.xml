@@ -11,10 +11,10 @@
             android:theme="@style/AppTheme"
             android:fullBackupContent="true"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".QuizActivity">
+        <activity android:name=".userinterfaces.QuizActivity">
         </activity>
         <activity
-                android:name=".SplashActivity"
+                android:name=".userinterfaces.SplashActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:theme="@style/SplashTheme">
             <intent-filter>
@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".userinterfaces.MainActivity">
         </activity>
     </application>
 
