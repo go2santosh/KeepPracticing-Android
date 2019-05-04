@@ -10,7 +10,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:fullBackupContent="true"
-            tools:ignore="GoogleAppIndexingWarning">
+            tools:ignore="GoogleAppIndexingWarning"
+            android:name=".MainApplication">
         <activity android:name=".userinterfaces.QuizActivity">
         </activity>
         <activity
