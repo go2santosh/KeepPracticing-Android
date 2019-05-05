@@ -7,6 +7,7 @@ import com.go2santosh.keeppracticing.models.QuizProvider
 import kotlinx.android.synthetic.main.activity_quiz.*
 import android.content.DialogInterface
 import android.app.AlertDialog
+import android.animation.ObjectAnimator
 
 class QuizActivity : Activity() {
 
@@ -55,5 +56,12 @@ class QuizActivity : Activity() {
     private fun submitAnswer() {
         quizProvider.submit(getAnswers())
         editTextAnswer.text.clear()
+        flipQuestionView()
+    }
+
+    private fun flipQuestionView() {
+        val animation = ObjectAnimator.ofFloat(layoutQuestion, "rotationY", 0.0f, 360f)
+        animation.duration = 500
+        animation.start()
     }
 }
