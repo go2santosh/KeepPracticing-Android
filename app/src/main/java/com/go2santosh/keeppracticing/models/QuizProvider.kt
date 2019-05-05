@@ -75,12 +75,17 @@ class QuizProvider(
     }
 
     fun submit(answers: List<String>) {
+        checkAnswers(answers)
+        if (!isCompleted) resumeQuiz()
+    }
+
+    fun checkAnswers(answers: List<String>) {
         if (currentQuestionIndex in questions.indices) {
-            val question = questions[currentQuestionIndex].question!!
-            if (answers.size == 0) {
+            val validAnswers = answers.filter { answer -> !answer.isNullOrBlank() }
+            if (validAnswers.isEmpty()) {
                 notAttempted++
             }
-            if (!isCompleted) resumeQuiz()
+            val question = questions[currentQuestionIndex].question!!
         }
     }
 }

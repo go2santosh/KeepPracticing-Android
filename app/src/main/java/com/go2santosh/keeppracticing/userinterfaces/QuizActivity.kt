@@ -14,7 +14,7 @@ class QuizActivity : Activity() {
         progress = { runOnUiThread { textViewProgress.text = it } },
         question = { runOnUiThread { textViewQuestion.text = it } },
         quizTimer = { runOnUiThread { textViewTimer.text = "Timer: $it" } },
-        timeout = { runOnUiThread { showAlert(it) }},
+        timeout = { runOnUiThread { timeout(it) }},
         result = { notAttempted, correct, incorrect -> runOnUiThread { showResult(notAttempted, correct, incorrect) }})
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,23 +23,28 @@ class QuizActivity : Activity() {
         setContentView(R.layout.activity_quiz)
     }
 
-    private fun showAlert(message: String) {
+    private fun timeout(message: String) {
+        val answers = getAnswers()
+        quizProvider.submit(answers)
+    }
+
+    private fun showResult(notAttempted: Int, correct: Int, incorrect: Int) {
+        val message = """
+            Correct $correct
+            Incorrect $incorrect
+            Not Attempted $notAttempted
+        """.trimIndent()
         AlertDialog.Builder(this)
-            .setTitle("Quiz Alert")
+            .setTitle("Quiz Completed!")
             .setMessage(message)
             .setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->
-                val answers = ArrayList<String>()
-                val answer = editTextAnswer.text.toString()
-                if (!answer.isNullOrBlank()) {
-                    answers.add(editTextAnswer.text.toString())
-                }
-                quizProvider.submit(answers)
+                finish()
             })
             .setIcon(android.R.drawable.ic_dialog_alert)
             .show()
     }
 
-    private fun showResult(notAttempted: Int, correct: Int, incorrect: Int) {
-        showAlert("Quiz Completed! Correct=$correct, Incorrect=$incorrect, Not Attempted=$notAttempted")
+    private fun getAnswers(): List<String> {
+        return listOf<String>(editTextAnswer.text.toString())
     }
 }

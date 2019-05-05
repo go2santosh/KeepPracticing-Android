@@ -20,6 +20,5 @@ class MainActivity : Activity() {
         val intent = Intent(applicationContext, QuizActivity::class.java)
         startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        finish()
     }
 }
