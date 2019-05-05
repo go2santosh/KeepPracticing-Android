@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_quiz.*
 import android.content.DialogInterface
 import android.app.AlertDialog
 import android.animation.ObjectAnimator
+import android.view.View
 
 class QuizActivity : Activity() {
 
@@ -30,19 +31,14 @@ class QuizActivity : Activity() {
     }
 
     private fun showResult(notAttempted: Int, correct: Int, incorrect: Int) {
-        val message = """
+        layoutQuestion.visibility = View.GONE
+        textViewResult.text = """
+            Quiz Completed!
+
             Correct $correct
             Incorrect $incorrect
             Not Attempted $notAttempted
         """.trimIndent()
-        AlertDialog.Builder(this)
-            .setTitle("Quiz Completed!")
-            .setMessage(message)
-            .setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialog, which ->
-                finish()
-            })
-            .setIcon(android.R.drawable.ic_dialog_alert)
-            .show()
     }
 
     private fun getAnswers(): List<String> {
@@ -50,7 +46,11 @@ class QuizActivity : Activity() {
     }
 
     private fun finishQuiz() {
-        quizProvider.finishQuiz()
+        if (!quizProvider.isCompleted) {
+            quizProvider.finishQuiz()
+        } else {
+            finish()
+        }
     }
 
     private fun submitAnswer() {

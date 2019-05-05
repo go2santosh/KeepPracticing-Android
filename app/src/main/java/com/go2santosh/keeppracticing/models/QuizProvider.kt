@@ -20,7 +20,7 @@ class QuizProvider(
     private var notAttempted = 0
     private var correct = 0
     private var incorrect = 0
-    private var isCompleted = false
+    var isCompleted = false
 
     init {
         startQuiz()
