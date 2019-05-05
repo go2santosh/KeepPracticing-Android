@@ -1,8 +1,6 @@
 package com.go2santosh.keeppracticing.models
 
-import android.content.Context
 import java.util.*
-import kotlin.collections.ArrayList
 
 class QuizProvider(
     val progress: (String) -> Unit,
@@ -69,8 +67,7 @@ class QuizProvider(
             question(getQuestion())
             startTimer()
         } else {
-            isCompleted = true
-            result(notAttempted, correct,incorrect)
+            finishQuiz()
         }
     }
 
@@ -86,6 +83,14 @@ class QuizProvider(
                 notAttempted++
             }
             val question = questions[currentQuestionIndex].question!!
+        }
+    }
+
+    fun finishQuiz() {
+        stopTimer()
+        if (!isCompleted) {
+            isCompleted = true
+            result(notAttempted, correct,incorrect)
         }
     }
 }

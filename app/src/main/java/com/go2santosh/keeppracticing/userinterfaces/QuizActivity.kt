@@ -19,8 +19,8 @@ class QuizActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_quiz)
+        buttonFinish.apply { setOnClickListener { finishQuiz() } }
     }
 
     private fun timeout(message: String) {
@@ -46,5 +46,9 @@ class QuizActivity : Activity() {
 
     private fun getAnswers(): List<String> {
         return listOf<String>(editTextAnswer.text.toString())
+    }
+
+    private fun finishQuiz() {
+        quizProvider.finishQuiz()
     }
 }

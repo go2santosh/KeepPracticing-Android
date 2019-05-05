@@ -1,6 +1,5 @@
 package com.go2santosh.keeppracticing.models
 
-import android.app.Application
 import android.util.Log
 import com.go2santosh.keeppracticing.MainApplication
 import org.json.JSONException
