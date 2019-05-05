@@ -82,14 +82,15 @@ class QuizProvider(
             val validAnswers = answers.filter { answer -> !answer.isBlank() }
             if (validAnswers.isEmpty()) {
                 notAttempted++
+            } else {
+                val question = questions[currentQuestionIndex]
+                var allMatched = true
+                for (i in 0..question.answers.lastIndex) {
+                    allMatched = question.answers[i] == answers[i]
+                    if (!allMatched) break
+                }
+                if (allMatched) correct++ else incorrect++
             }
-            val question = questions[currentQuestionIndex]
-            var allMatched = true
-            for (i in 0..question.answers.lastIndex) {
-                allMatched = question.answers[i] == answers[i]
-                if (!allMatched) break
-            }
-            if (allMatched) correct++ else incorrect++
         }
     }
 
