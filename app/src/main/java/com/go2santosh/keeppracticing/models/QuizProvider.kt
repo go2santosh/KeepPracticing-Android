@@ -9,9 +9,9 @@ class QuizProvider(
     val timeout: (message: String) -> Unit,
     val result: (notAttempted: Int, correct: Int, incorrect: Int) -> Unit) {
 
-    val TIMER_DELAY = 0L
-    val TIMER_PERIOD = 1000L
-    val TIMER_TIMEOUT = 5
+    private val TIMER_DELAY = 0L
+    private val TIMER_PERIOD = 1000L
+    private val TIMER_TIMEOUT = 60
 
     private var timer = Timer()
     private var timerTimeout = TIMER_TIMEOUT
@@ -60,7 +60,7 @@ class QuizProvider(
         timer.cancel()
     }
 
-    fun resumeQuiz() {
+    private fun resumeQuiz() {
         currentQuestionIndex++
         if (currentQuestionIndex in questions.indices) {
             progress(getProgress())
@@ -72,17 +72,24 @@ class QuizProvider(
     }
 
     fun submit(answers: List<String>) {
+        stopTimer()
         checkAnswers(answers)
         if (!isCompleted) resumeQuiz()
     }
 
-    fun checkAnswers(answers: List<String>) {
+    private fun checkAnswers(answers: List<String>) {
         if (currentQuestionIndex in questions.indices) {
-            val validAnswers = answers.filter { answer -> !answer.isNullOrBlank() }
+            val validAnswers = answers.filter { answer -> !answer.isBlank() }
             if (validAnswers.isEmpty()) {
                 notAttempted++
             }
-            val question = questions[currentQuestionIndex].question!!
+            val question = questions[currentQuestionIndex]
+            var allMatched = true
+            for (i in 0..question.answers.lastIndex) {
+                allMatched = question.answers[i] == answers[i]
+                if (!allMatched) break
+            }
+            if (allMatched) correct++ else incorrect++
         }
     }
 

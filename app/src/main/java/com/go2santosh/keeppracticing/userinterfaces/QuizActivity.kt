@@ -10,7 +10,7 @@ import android.app.AlertDialog
 
 class QuizActivity : Activity() {
 
-    val quizProvider = QuizProvider(
+    private val quizProvider = QuizProvider(
         progress = { runOnUiThread { textViewProgress.text = it } },
         question = { runOnUiThread { textViewQuestion.text = it } },
         quizTimer = { runOnUiThread { textViewTimer.text = "Timer: $it" } },
@@ -21,11 +21,11 @@ class QuizActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
         buttonFinish.apply { setOnClickListener { finishQuiz() } }
+        buttonSubmit.apply { setOnClickListener { submitAnswer() } }
     }
 
     private fun timeout(message: String) {
-        val answers = getAnswers()
-        quizProvider.submit(answers)
+        submitAnswer()
     }
 
     private fun showResult(notAttempted: Int, correct: Int, incorrect: Int) {
@@ -45,10 +45,15 @@ class QuizActivity : Activity() {
     }
 
     private fun getAnswers(): List<String> {
-        return listOf<String>(editTextAnswer.text.toString())
+        return listOf(editTextAnswer.text.toString())
     }
 
     private fun finishQuiz() {
         quizProvider.finishQuiz()
+    }
+
+    private fun submitAnswer() {
+        quizProvider.submit(getAnswers())
+        editTextAnswer.text.clear()
     }
 }
