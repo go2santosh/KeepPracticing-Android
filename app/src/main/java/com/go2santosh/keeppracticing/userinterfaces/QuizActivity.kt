@@ -5,8 +5,6 @@ import android.os.Bundle
 import com.go2santosh.keeppracticing.R
 import com.go2santosh.keeppracticing.models.QuizProvider
 import kotlinx.android.synthetic.main.activity_quiz.*
-import android.content.DialogInterface
-import android.app.AlertDialog
 import android.animation.ObjectAnimator
 import android.view.View
 
@@ -23,7 +21,7 @@ class QuizActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
         buttonFinish.apply { setOnClickListener { finishQuiz() } }
-        buttonSubmit.apply { setOnClickListener { submitAnswer() } }
+        simpleKeyboard.setListeners({ textViewAnswer.text = it }, { submitAnswer() })
     }
 
     private fun timeout(message: String) {
@@ -42,7 +40,7 @@ class QuizActivity : Activity() {
     }
 
     private fun getAnswers(): List<String> {
-        return listOf(editTextAnswer.text.toString())
+        return listOf(textViewAnswer.text.toString())
     }
 
     private fun finishQuiz() {
@@ -55,7 +53,7 @@ class QuizActivity : Activity() {
 
     private fun submitAnswer() {
         quizProvider.submit(getAnswers())
-        editTextAnswer.text.clear()
+        simpleKeyboard.clear()
         flipQuestionView()
     }
 

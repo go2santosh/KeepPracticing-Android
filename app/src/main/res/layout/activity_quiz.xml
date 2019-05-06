@@ -2,6 +2,7 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/activityQuiz"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -84,27 +85,22 @@
                 android:textColor="@color/colorPrimary"
                 android:text="@string/sample_question"/>
 
-        <EditText
-                android:id="@+id/editTextAnswer"
+        <TextView
+                android:id="@+id/textViewAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
+                android:textSize="@dimen/text_size_medium"
+                android:background="@color/colorUneditable"
                 android:hint="@string/answer"/>
 
-        <Button
-                android:id="@+id/buttonSubmit"
-                android:layout_width="wrap_content"
+        <com.go2santosh.keeppracticing.views.SimpleKeyboardView
+                android:id="@+id/simpleKeyboard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:textSize="@dimen/text_size_medium"
-                android:paddingTop="@dimen/padding_small"
-                android:paddingBottom="@dimen/padding_small"
-                android:paddingLeft="@dimen/padding_large"
-                android:paddingRight="@dimen/padding_large"
-                android:textAllCaps="false"
-                android:background="@drawable/button_rounded_corner"
-                android:textColor="@color/colorPrimaryContrast"
-                android:text="@string/submit"/>
+                app:textSize="@dimen/text_size_medium"
+                app:submitText="Enter"
+                app:deleteText="Erase"/>
 
     </LinearLayout>
 
