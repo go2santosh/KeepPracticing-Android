@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">KeepPracticing</string>
+    <string name="keep_practicing">Keep Practicing!</string>
+    <string name="start">Start</string>
+    <string name="sample_progress_value">Question 1 of 10</string>
+    <string name="sample_timer_value">Timer 00:00</string>
+    <string name="finish">Finsh</string>
+    <string name="sample_question">What is the sum of 98373 + 28464?</string>
+    <string name="answer">Answer</string>
+    <string name="submit">Submit</string>
 </resources>
