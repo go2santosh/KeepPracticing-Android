@@ -8,11 +8,11 @@ import java.util.ArrayList
 
 object QuizDataProvider {
 
-    val TAG = "QuizDataProvider"
-    val DATA_FILE_NAME = "data/sample_questions.json"
-    val QUESTIONS_ARRAY_NAME = "questions"
+    private const val logMessageSource = "QuizDataProvider"
+    private const val dataFileName = "data/sample_questions.json"
+    private const val questionsElementName = "questions"
 
-    var questions: ArrayList<QuestionEntity> = ArrayList<QuestionEntity>()
+    var questions: ArrayList<QuestionEntity> = ArrayList()
 
     init {
         loadQuestions()
@@ -22,16 +22,16 @@ object QuizDataProvider {
         try {
             val jsonString = MainApplication
                 .applicationContext()
-                .getAssets()
-                .open(DATA_FILE_NAME)
+                .assets
+                .open(dataFileName)
                 .bufferedReader().use { it.readText() }
-            val jsonArray = JSONObject(jsonString).optJSONArray(QUESTIONS_ARRAY_NAME)
+            val jsonArray = JSONObject(jsonString).optJSONArray(questionsElementName)
             for (i in 0 until jsonArray.length()) {
                 val entity = QuestionEntity(jsonArray.getJSONObject(i).toString())
                 questions.add(entity)
             }
         } catch (jsonException: JSONException) {
-            Log.w(TAG, "Json string failed to deserialize.")
+            Log.w(logMessageSource, "Json string failed to deserialize.")
         }
     }
 }

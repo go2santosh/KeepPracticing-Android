@@ -19,12 +19,12 @@ class SplashActivity : Activity() {
 
     private fun animateLaunchLogo() {
 
-        val animation = AnimationUtils.loadAnimation(applicationContext,
+        val animation = AnimationUtils.loadAnimation(
+            applicationContext,
             R.anim.anim_splash_text
         )
         animation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
-
             }
 
             override fun onAnimationEnd(animation: Animation) {
@@ -32,7 +32,6 @@ class SplashActivity : Activity() {
             }
 
             override fun onAnimationRepeat(animation: Animation) {
-
             }
         })
         textViewSplash.startAnimation(animation)

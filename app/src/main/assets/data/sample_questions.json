@@ -3,28 +3,16 @@
   "questions": [
     {
       "question": "Rewrite the number 2509812 by placing commas at the appropriate places.",
-      "inputType": "TEXT",
-      "inputCount": 1,
-      "answers": ["25,09,812"],
-      "timeout": 60
+      "answers": ["25,09,812"]
     }, {
       "question": "Rewrite the number 6525092 by placing commas at the appropriate places.",
-      "inputType": "TEXT",
-      "inputCount": 1,
-      "answers": ["65,25,092"],
-      "timeout": 60
+      "answers": ["65,25,092"]
     }, {
       "question": "Rewrite the number 6078094 by placing commas at the appropriate places.",
-      "inputType": "TEXT",
-      "inputCount": 1,
-      "answers": ["60,78,094"],
-      "timeout": 60
+      "answers": ["60,78,094"]
     }, {
       "question": "Rewrite the number 47215058 by placing commas at the appropriate places.",
-      "inputType": "TEXT",
-      "inputCount": 1,
-      "answers": ["4,72,15,058"],
-      "timeout": 60
+      "answers": ["4,72,15,058"]
     }
   ]
 }

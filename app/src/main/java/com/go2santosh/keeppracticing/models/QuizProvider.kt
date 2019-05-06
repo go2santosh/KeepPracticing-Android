@@ -3,24 +3,26 @@ package com.go2santosh.keeppracticing.models
 import java.util.*
 
 class QuizProvider(
-    val progress: (String) -> Unit,
-    val question: (String) -> Unit,
-    val quizTimer: (Int) -> Unit,
-    val timeout: (message: String) -> Unit,
-    val result: (notAttempted: Int, correct: Int, incorrect: Int) -> Unit) {
+    val progressHandler: (String) -> Unit,
+    val questionHandler: (String) -> Unit,
+    val quizTimerHandler: (Int) -> Unit,
+    val timeoutHandler: () -> Unit,
+    val resultHandler: (notAttempted: Int, correct: Int, incorrect: Int) -> Unit
+) {
 
-    private val TIMER_DELAY = 0L
-    private val TIMER_PERIOD = 1000L
-    private val TIMER_TIMEOUT = 60
+    private val timerDelay = 0L
+    private val timerPeriod = 1000L
+    private val defaultTimerTimeout = 60
 
     private var timer = Timer()
-    private var timerTimeout = TIMER_TIMEOUT
+    private var timerTimeoutCountdown = defaultTimerTimeout
     private var questions: List<QuestionEntity> = QuizDataProvider.questions
     private var currentQuestionIndex: Int = -1
     private var notAttempted = 0
     private var correct = 0
     private var incorrect = 0
-    var isCompleted = false
+
+    internal var isCompleted = false
 
     init {
         startQuiz()
@@ -43,16 +45,24 @@ class QuizProvider(
     }
 
     private fun startTimer() {
-        timerTimeout = TIMER_TIMEOUT
+        timerTimeoutCountdown = defaultTimerTimeout
         timer = Timer("alertTimer", true)
         timer.scheduleAtFixedRate(
             object : TimerTask() {
                 override fun run() {
-                    quizTimer(if (timerTimeout > 0) timerTimeout-- else {stopTimer(); timeout("Timed out!"); 0})
+                    quizTimerHandler(
+                        if (timerTimeoutCountdown > 0) {
+                            timerTimeoutCountdown--
+                        } else {
+                            stopTimer()
+                            timeoutHandler()
+                            0
+                        }
+                    )
                 }
             },
-            TIMER_DELAY,
-            TIMER_PERIOD
+            timerDelay,
+            timerPeriod
         )
     }
 
@@ -63,8 +73,8 @@ class QuizProvider(
     private fun resumeQuiz() {
         currentQuestionIndex++
         if (currentQuestionIndex in questions.indices) {
-            progress(getProgress())
-            question(getQuestion())
+            progressHandler(getProgress())
+            questionHandler(getQuestion())
             startTimer()
         } else {
             finishQuiz()
@@ -98,7 +108,7 @@ class QuizProvider(
         stopTimer()
         if (!isCompleted) {
             isCompleted = true
-            result(notAttempted, correct,incorrect)
+            resultHandler(notAttempted, correct, incorrect)
         }
     }
 }

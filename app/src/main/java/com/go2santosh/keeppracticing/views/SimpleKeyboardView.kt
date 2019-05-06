@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.LinearLayout
 import com.go2santosh.keeppracticing.R
-import kotlinx.android.synthetic.main.layout_keyboard_simple.view.*
-import kotlinx.android.synthetic.main.layout_keyboard_simple.view.buttonSubmit
+import kotlinx.android.synthetic.main.view_keyboard_simple.view.*
+import kotlinx.android.synthetic.main.view_keyboard_simple.view.buttonSubmit
 
 class SimpleKeyboardView(
     context: Context,
@@ -37,7 +37,7 @@ class SimpleKeyboardView(
     private var _submitListener: (() -> Unit)? = null
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.layout_keyboard_simple, this, true)
+        LayoutInflater.from(context).inflate(R.layout.view_keyboard_simple, this, true)
         attrs?.let {
             val styledAttributes = context.obtainStyledAttributes(it, R.styleable.SimpleKeyboardView, 0, 0)
             val textSize = styledAttributes.getDimensionPixelSize(R.styleable.SimpleKeyboardView_textSize, 24)

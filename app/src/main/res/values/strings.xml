@@ -8,4 +8,6 @@
     <string name="sample_question">What is the sum of 98373 + 28464?</string>
     <string name="answer">Answer</string>
     <string name="submit">Submit</string>
+    <string name="timer_with_1_replacable">Timer: $0</string>
+    <string name="quiz_completed_with_3_replacables">Quiz Completed!\n\nCorrect $0\nIncorrect $1\nNot Attempted $2</string>
 </resources>
