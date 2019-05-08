@@ -1,4 +1,4 @@
-package com.go2santosh.keeppracticing.models
+package com.go2santosh.keeppracticing.models.quizmodel
 
 import org.json.JSONObject
 

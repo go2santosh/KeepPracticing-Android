@@ -3,7 +3,7 @@ package com.go2santosh.keeppracticing.userinterfaces
 import android.app.Activity
 import android.os.Bundle
 import com.go2santosh.keeppracticing.R
-import com.go2santosh.keeppracticing.models.QuizProvider
+import com.go2santosh.keeppracticing.models.quizmodel.QuizProvider
 import kotlinx.android.synthetic.main.activity_quiz.*
 import android.animation.ObjectAnimator
 import android.view.View

@@ -1,4 +1,4 @@
-package com.go2santosh.keeppracticing.models
+package com.go2santosh.keeppracticing.models.quizmodel
 
 import android.util.Log
 import com.go2santosh.keeppracticing.MainApplication
@@ -10,7 +10,6 @@ object QuizDataProvider {
 
     private const val logMessageSource = "QuizDataProvider"
     private const val dataFileName = "data/sample_questions.json"
-    private const val questionsElementName = "questions"
 
     var questions: ArrayList<QuestionEntity> = ArrayList()
 
@@ -25,7 +24,7 @@ object QuizDataProvider {
                 .assets
                 .open(dataFileName)
                 .bufferedReader().use { it.readText() }
-            val jsonArray = JSONObject(jsonString).optJSONArray(questionsElementName)
+            val jsonArray = JSONObject(jsonString).optJSONArray("questions")
             for (i in 0 until jsonArray.length()) {
                 val entity = QuestionEntity(jsonArray.getJSONObject(i).toString())
                 questions.add(entity)

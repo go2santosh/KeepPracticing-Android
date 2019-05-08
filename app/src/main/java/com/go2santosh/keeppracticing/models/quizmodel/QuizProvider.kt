@@ -1,4 +1,4 @@
-package com.go2santosh.keeppracticing.models
+package com.go2santosh.keeppracticing.models.quizmodel
 
 import java.util.*
 
@@ -16,7 +16,8 @@ class QuizProvider(
 
     private var timer = Timer()
     private var timerTimeoutCountdown = defaultTimerTimeout
-    private var questions: List<QuestionEntity> = QuizDataProvider.questions
+    private var questions: List<QuestionEntity> =
+        QuizDataProvider.questions
     private var currentQuestionIndex: Int = -1
     private var notAttempted = 0
     private var correct = 0
