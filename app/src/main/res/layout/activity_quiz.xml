@@ -90,17 +90,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
+                android:padding="@dimen/padding_small"
                 android:textSize="@dimen/text_size_medium"
                 android:background="@color/colorUneditable"
                 android:hint="@string/answer"/>
 
-        <com.go2santosh.keeppracticing.views.SimpleKeyboardView
-                android:id="@+id/simpleKeyboard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:textSize="@dimen/text_size_medium"
-                app:submitText="Enter"
-                app:deleteText="Erase"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0sp"
+                      android:orientation="vertical"
+                      android:gravity="bottom"
+                      android:layout_weight="1">
+
+            <com.go2santosh.keeppracticing.views.SimpleKeyboardView
+                    android:id="@+id/simpleKeyboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:textSize="@dimen/text_size_medium"
+                    app:firstLineKeyValues="1|2|3|4|5|6|Delete"
+                    app:secondLineKeyValues="7|8|9|0|,|.|Submit"
+                    app:submitText="Enter"
+                    app:deleteText="Erase"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -120,7 +132,7 @@
                 android:layout_marginTop="@dimen/margin_medium"
                 android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
-                android:text="Quiz Completed!"/>
+                android:text="@string/quiz_completed_with_3_replacables"/>
 
     </LinearLayout>
 

@@ -3,6 +3,9 @@
     <declare-styleable name="SimpleKeyboardView">
         <attr name="submitText" format="string"/>
         <attr name="deleteText" format="string"/>
+        <attr name="clearText" format="string"/>
         <attr name="textSize" format="dimension"/>
+        <attr name="firstLineKeyValues" format="string"/>
+        <attr name="secondLineKeyValues" format="string"/>
     </declare-styleable>
 </resources>
