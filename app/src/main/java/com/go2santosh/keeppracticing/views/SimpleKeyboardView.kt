@@ -4,10 +4,12 @@ import android.content.Context
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import com.go2santosh.keeppracticing.R
+import com.go2santosh.keeppracticing.models.keyboardmodel.KeyboardDataProvider
 import kotlinx.android.synthetic.main.view_keyboard_simple.view.*
 
 class SimpleKeyboardView(
@@ -74,7 +76,30 @@ class SimpleKeyboardView(
         _textUpdateListener?.invoke(output)
     }
 
+    fun setKeyboard(name: String) {
+        val keyboard = KeyboardDataProvider.keyboard(name)
+        val firstLineKeyValues = keyboard.configuration?.firstLineKeys
+        if (!firstLineKeyValues.isNullOrBlank()) {
+            addKeysToViewGroup(
+                firstLineKeyValues,
+                viewGroupFirstLineKeys as LinearLayout
+            )
+        } else {
+            viewGroupFirstLineKeys.visibility = View.GONE
+        }
+        val secondLineKeyValues = keyboard.configuration?.secondLineKeys
+        if (!secondLineKeyValues.isNullOrBlank()) {
+            addKeysToViewGroup(
+                secondLineKeyValues,
+                viewGroupSecondLineKeys as LinearLayout
+            )
+        } else {
+            viewGroupSecondLineKeys.visibility = View.GONE
+        }
+    }
+
     private fun addKeysToViewGroup(values: String, viewGroup: ViewGroup) {
+        viewGroup.removeAllViews()
         val keyValues = values.split("|")
         keyValues.forEach { keyValue ->
             val button = when (keyValue.trim()) {
@@ -133,6 +158,7 @@ class SimpleKeyboardView(
             }
             viewGroup.addView(button)
         }
+        viewGroup.visibility = View.VISIBLE
     }
 
     private fun createButton(

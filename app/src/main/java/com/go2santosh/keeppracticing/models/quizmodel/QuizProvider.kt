@@ -3,9 +3,9 @@ package com.go2santosh.keeppracticing.models.quizmodel
 import java.util.*
 
 class QuizProvider(
-    val progressHandler: (String) -> Unit,
-    val questionHandler: (String) -> Unit,
-    val quizTimerHandler: (Int) -> Unit,
+    val progressHandler: (message: String) -> Unit,
+    val questionHandler: (question: String, keyboard: String) -> Unit,
+    val quizTimerHandler: (remainingSeconds: Int) -> Unit,
     val timeoutHandler: () -> Unit,
     val resultHandler: (notAttempted: Int, correct: Int, incorrect: Int) -> Unit
 ) {
@@ -16,8 +16,6 @@ class QuizProvider(
 
     private var timer = Timer()
     private var timerTimeoutCountdown = defaultTimerTimeout
-    private var questions: List<QuestionEntity> =
-        QuizDataProvider.questions
     private var currentQuestionIndex: Int = -1
     private var notAttempted = 0
     private var correct = 0
@@ -39,10 +37,6 @@ class QuizProvider(
 
     private fun getProgress(): String {
         return "Question ${currentQuestionIndex + 1} | Correct $correct | Incorrect $incorrect | Not Attempted $notAttempted"
-    }
-
-    private fun getQuestion(): String {
-        return questions[currentQuestionIndex].question!!
     }
 
     private fun startTimer() {
@@ -73,9 +67,9 @@ class QuizProvider(
 
     private fun resumeQuiz() {
         currentQuestionIndex++
-        if (currentQuestionIndex in questions.indices) {
+        if (currentQuestionIndex in QuizDataProvider.questions.indices) {
             progressHandler(getProgress())
-            questionHandler(getQuestion())
+            questionHandler(QuizDataProvider.questions[currentQuestionIndex].question!!, QuizDataProvider.questions[currentQuestionIndex].keyboard!!)
             startTimer()
         } else {
             finishQuiz()
@@ -89,12 +83,12 @@ class QuizProvider(
     }
 
     private fun checkAnswers(answers: List<String>) {
-        if (currentQuestionIndex in questions.indices) {
+        if (currentQuestionIndex in QuizDataProvider.questions.indices) {
             val validAnswers = answers.filter { answer -> !answer.isBlank() }
             if (validAnswers.isEmpty()) {
                 notAttempted++
             } else {
-                val question = questions[currentQuestionIndex]
+                val question = QuizDataProvider.questions[currentQuestionIndex]
                 var allMatched = true
                 for (i in 0..question.answers.lastIndex) {
                     allMatched = question.answers[i] == answers[i]

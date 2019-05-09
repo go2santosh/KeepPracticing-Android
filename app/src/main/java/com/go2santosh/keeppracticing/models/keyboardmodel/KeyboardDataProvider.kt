@@ -33,4 +33,8 @@ object KeyboardDataProvider {
             Log.w(logMessageSource, "Json string failed to deserialize.")
         }
     }
+
+    fun keyboard(name: String) : KeyboardEntity {
+        return keyboards.first { it.name == name }
+    }
 }

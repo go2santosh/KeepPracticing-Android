@@ -12,7 +12,12 @@ class QuizActivity : Activity() {
 
     private val quizProvider = QuizProvider(
         progressHandler = { runOnUiThread { textViewProgress.text = it } },
-        questionHandler = { runOnUiThread { textViewQuestion.text = it } },
+        questionHandler = { question, keyboard ->
+            runOnUiThread {
+                textViewQuestion.text = question
+                simpleKeyboard.setKeyboard(keyboard)
+            }
+        },
         quizTimerHandler = { seconds ->
             runOnUiThread {
                 textViewTimer.text = getString(R.string.timer_with_1_replacable).replace("$0", seconds.toString())
