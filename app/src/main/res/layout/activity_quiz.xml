@@ -62,8 +62,7 @@
                     android:text="@string/finish"
                     android:layout_gravity="center_vertical"
                     android:background="@color/colorPrimary"
-                    android:textColor="@color/colorPrimaryContrast"
-                    android:textAllCaps="false"/>
+                    android:textColor="@color/colorPrimaryContrast"/>
 
         </LinearLayout>
 

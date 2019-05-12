@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginTop="@dimen/margin_extra_large"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/text_size_large"/>
 
@@ -28,7 +28,19 @@
             android:paddingBottom="@dimen/padding_small"
             android:paddingLeft="@dimen/padding_large"
             android:paddingRight="@dimen/padding_large"
-            android:textAllCaps="false"
             android:background="@drawable/button_rounded_corner"/>
+
+    <Button
+            android:id="@+id/buttonExploreContents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/explore_contents"
+            android:textSize="@dimen/text_size_medium"
+            android:background="@color/colorPrimaryContrast"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_extra_large"
+            style="?borderlessButtonStyle"/>
 
 </RelativeLayout>

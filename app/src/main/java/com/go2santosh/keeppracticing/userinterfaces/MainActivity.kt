@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.go2santosh.keeppracticing.R
+import com.go2santosh.keeppracticing.userinterfaces.contents.ContentsActivity
 
 class MainActivity : Activity() {
 
@@ -14,10 +15,17 @@ class MainActivity : Activity() {
         textViewCaption.text = getString(R.string.keep_practicing)
         buttonStart.text = getString(R.string.start)
         buttonStart.apply { setOnClickListener { startQuiz() } }
+        buttonExploreContents.apply { setOnClickListener { startContents() } }
     }
 
     private fun startQuiz() {
         val intent = Intent(applicationContext, QuizActivity::class.java)
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+    }
+
+    private fun startContents() {
+        val intent = Intent(applicationContext, ContentsActivity::class.java)
         startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }

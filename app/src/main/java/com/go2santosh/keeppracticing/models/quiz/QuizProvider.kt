@@ -1,4 +1,4 @@
-package com.go2santosh.keeppracticing.models.quizmodel
+package com.go2santosh.keeppracticing.models.quiz
 
 import java.util.*
 

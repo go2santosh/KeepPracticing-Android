@@ -1,4 +1,4 @@
-package com.go2santosh.keeppracticing.models.keyboardmodel
+package com.go2santosh.keeppracticing.models.customkeyboard
 
 import org.json.JSONObject
 

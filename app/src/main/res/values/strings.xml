@@ -12,4 +12,6 @@
     <string name="clear">Clear</string>
     <string name="timer_with_1_replacable">Timer: $0</string>
     <string name="quiz_completed_with_3_replacables">Quiz Completed!\n\nCorrect $0\nIncorrect $1\nNot Attempted $2</string>
+    <string name="contents">Contents</string>
+    <string name="explore_contents">Explore Contents</string>
 </resources>

@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginTop="@dimen/margin_extra_large"
             android:textColor="@color/colorPrimaryContrast"
             android:textSize="@dimen/text_size_large"/>
 

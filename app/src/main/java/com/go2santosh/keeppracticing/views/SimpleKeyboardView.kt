@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import com.go2santosh.keeppracticing.R
-import com.go2santosh.keeppracticing.models.keyboardmodel.KeyboardDataProvider
+import com.go2santosh.keeppracticing.models.customkeyboard.KeyboardDataProvider
 import kotlinx.android.synthetic.main.view_keyboard_simple.view.*
 
 class SimpleKeyboardView(
@@ -111,6 +111,7 @@ class SimpleKeyboardView(
                         keyValue,
                         textSize.toFloat()
                     ).apply {
+                        isAllCaps = true
                         text = submitText
                         setOnClickListener { _submitListener?.invoke() }
                     }
@@ -122,6 +123,7 @@ class SimpleKeyboardView(
                         keyValue,
                         textSize.toFloat()
                     ).apply {
+                        isAllCaps = true
                         text = deleteText
                         setOnClickListener {
                             output = output.dropLast(1)
@@ -136,6 +138,7 @@ class SimpleKeyboardView(
                         keyValue,
                         textSize.toFloat()
                     ).apply {
+                        isAllCaps = true
                         text = clearText
                         setOnClickListener {
                             output = ""

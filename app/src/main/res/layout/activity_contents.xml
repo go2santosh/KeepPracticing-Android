@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".userinterfaces.contents.ContentsActivity"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_layout_height"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+        <TextView
+                android:id="@+id/textViewTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_medium"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/colorPrimaryContrast"
+                android:text="@string/contents"
+                android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/listViewContents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>
