@@ -4,5 +4,5 @@ class HierarchicEntity(
     val name: String,
     val parentItemName: String? = null
 ) {
-    var isExpanded = false
+    internal var isExpanded = true
 }
