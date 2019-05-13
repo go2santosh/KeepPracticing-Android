@@ -1,6 +1,6 @@
 package com.go2santosh.keeppracticing.userinterfaces.contents
 
-class ContentsItem(
+class HierarchicEntity(
     val name: String,
     val parentItemName: String? = null
 ) {

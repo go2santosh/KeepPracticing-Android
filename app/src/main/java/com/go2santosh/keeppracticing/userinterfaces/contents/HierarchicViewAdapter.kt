@@ -9,14 +9,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.go2santosh.keeppracticing.R
 
-class ContentsItemAdapter(
+class HierarchicViewAdapter(
     context: Context,
     val resource: Int,
-    val list: ArrayList<ContentsItem>
-) : ArrayAdapter<ContentsItem>(context, resource, list) {
+    val list: ArrayList<HierarchicEntity>
+) : ArrayAdapter<HierarchicEntity>(context, resource, list) {
 
     private var listItemsHashCode = this.list.hashCode()
-    internal var listItems = this.list
+    private var listItems = this.list
     private var layoutInflater: LayoutInflater = context.getSystemService(
         Context.LAYOUT_INFLATER_SERVICE
     ) as LayoutInflater
@@ -26,12 +26,15 @@ class ContentsItemAdapter(
         val returnView: View
         val listItem = listItems[position]
 
-        if (convertView == null || convertView?.tag != listItemsHashCode) {
+        if (convertView == null || convertView.tag != listItemsHashCode) {
             returnView = layoutInflater.inflate(resource, null)
             if (listItem.parentItemName != null) {
                 returnView?.setPadding(
                     context.resources.getDimension(R.dimen.padding_large).toInt() * getHierarchyLevel(position),
-                    0, 0,0)
+                    0,
+                    0,
+                    0
+                )
             }
             val imageView = returnView.findViewById(R.id.imageViewExpandIcon) as ImageView?
             if (listItem.isExpanded)
@@ -48,7 +51,7 @@ class ContentsItemAdapter(
         return returnView
     }
 
-    internal fun setList(list: ArrayList<ContentsItem>) {
+    internal fun setList(list: ArrayList<HierarchicEntity>) {
         val newList = list.map { it }
         listItems.clear()
         listItems.addAll(newList)
@@ -57,7 +60,7 @@ class ContentsItemAdapter(
     }
 
     private fun getHierarchyLevel(position: Int): Int {
-        var listItem: ContentsItem? = listItems[position]
+        var listItem: HierarchicEntity? = listItems[position]
         var hierarchyLevel = 0
         while (listItem?.parentItemName != null) {
             hierarchyLevel++
