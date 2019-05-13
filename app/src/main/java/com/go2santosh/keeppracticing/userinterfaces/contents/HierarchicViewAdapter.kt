@@ -4,68 +4,37 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import com.go2santosh.keeppracticing.R
 
 class HierarchicViewAdapter(
+    val resource: Int,
     private val hierarchicList: ArrayList<HierarchicEntity>,
-    val onClickListener: (HierarchicEntity) -> Unit
+    val viewHandler: (itemView: View, hierarchicEntity: HierarchicEntity) -> Unit,
+    val clickHandler: (HierarchicEntity) -> Unit
 ) : RecyclerView.Adapter<HierarchicViewAdapter.ViewHolder>() {
 
     private var processedHierarchicList: ArrayList<HierarchicEntity> = ArrayList(hierarchicList.map { it })
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
         LayoutInflater.from(parent.context)
-            .inflate(R.layout.list_item_hierarchic_view, parent, false)
+            .inflate(resource, parent, false)
     )
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bindItems(processedHierarchicList[position])
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int
+    ) = holder.bindItems(processedHierarchicList[position])
 
     override fun getItemCount() = processedHierarchicList.size
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val imageView: ImageView = itemView.findViewById(R.id.imageViewExpandIcon)
-        private val textView: TextView = itemView.findViewById(R.id.textViewSubject)
-
-        internal fun bindItems(hierarchicEntity: HierarchicEntity) = with(itemView) {
-            if (hasChildren(hierarchicEntity = hierarchicEntity, listItems = hierarchicList)) {
-                imageView.visibility = View.VISIBLE
-                if (hierarchicEntity.isExpanded)
-                    imageView.setImageDrawable(context.resources.getDrawable(R.drawable.ic_expand_less))
-                else
-                    imageView.setImageDrawable(context.resources.getDrawable(R.drawable.ic_expand_more))
-            } else {
-                imageView.visibility = View.INVISIBLE
-            }
-            imageView.setPadding(
-                context.resources.getDimension(R.dimen.padding_large).toInt() *
-                        getHierarchyLevel(hierarchicEntity = hierarchicEntity, listItems = processedHierarchicList),
-                0,
-                0,
-                0
-            )
-            textView.text = hierarchicEntity.name
-            setOnClickListener {
+        internal fun bindItems(hierarchicEntity: HierarchicEntity) {
+            viewHandler(itemView, hierarchicEntity)
+            itemView.setOnClickListener {
                 expandOrCollapse(hierarchicEntity = hierarchicEntity, listItems = processedHierarchicList)
-                onClickListener(hierarchicEntity)
+                clickHandler(hierarchicEntity)
             }
         }
-    }
-
-    private fun getHierarchyLevel(
-        hierarchicEntity: HierarchicEntity,
-        listItems: ArrayList<HierarchicEntity>
-    ): Int {
-
-        var entity: HierarchicEntity? = hierarchicEntity
-        var hierarchyLevel = 0
-        while (entity?.parentId != null) {
-            hierarchyLevel++
-            entity = listItems.firstOrNull { it.id == entity?.parentId }
-        }
-        return hierarchyLevel
     }
 
     private fun expandOrCollapse(
@@ -123,9 +92,4 @@ class HierarchicViewAdapter(
 
         return ArrayList(listItems.filter { !idsToEliminate.contains(it.id) })
     }
-
-    private fun hasChildren(
-        hierarchicEntity: HierarchicEntity,
-        listItems: ArrayList<HierarchicEntity>
-    ) = !listItems.filter { it.parentId == hierarchicEntity.id }.isNullOrEmpty()
 }
