@@ -1,8 +1,11 @@
 package com.go2santosh.keeppracticing.userinterfaces.contents
 
-class HierarchicEntity(
+import java.util.*
+
+data class HierarchicEntity(
+    val id: String = UUID.randomUUID().toString(),
     val name: String,
-    val parentItemName: String? = null
+    val parentId: String? = null
 ) {
     internal var isExpanded = true
 }

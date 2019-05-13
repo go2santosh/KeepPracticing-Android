@@ -20,13 +20,9 @@ class HierarchicViewAdapter(
             .inflate(R.layout.list_item_hierarchic_view, parent, false)
     )
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(processedHierarchicList[position])
-    }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bindItems(processedHierarchicList[position])
 
-    override fun getItemCount(): Int {
-        return processedHierarchicList.size
-    }
+    override fun getItemCount() = processedHierarchicList.size
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -34,7 +30,7 @@ class HierarchicViewAdapter(
         private val textView: TextView = itemView.findViewById(R.id.textViewSubject)
 
         internal fun bindItems(hierarchicEntity: HierarchicEntity) = with(itemView) {
-            if (hasChildren(hierarchicEntity, hierarchicList)) {
+            if (hasChildren(hierarchicEntity = hierarchicEntity, listItems = hierarchicList)) {
                 imageView.visibility = View.VISIBLE
                 if (hierarchicEntity.isExpanded)
                     imageView.setImageDrawable(context.resources.getDrawable(R.drawable.ic_expand_less))
@@ -44,28 +40,30 @@ class HierarchicViewAdapter(
                 imageView.visibility = View.INVISIBLE
             }
             imageView.setPadding(
-                context.resources.getDimension(R.dimen.padding_large).toInt() * getHierarchyLevel(
-                    hierarchicEntity,
-                    processedHierarchicList
-                ),
+                context.resources.getDimension(R.dimen.padding_large).toInt() *
+                        getHierarchyLevel(hierarchicEntity = hierarchicEntity, listItems = processedHierarchicList),
                 0,
                 0,
                 0
             )
             textView.text = hierarchicEntity.name
             setOnClickListener {
-                expandOrCollapse(hierarchicEntity, processedHierarchicList)
+                expandOrCollapse(hierarchicEntity = hierarchicEntity, listItems = processedHierarchicList)
                 onClickListener(hierarchicEntity)
             }
         }
     }
 
-    private fun getHierarchyLevel(hierarchicEntity: HierarchicEntity, listItems: ArrayList<HierarchicEntity>): Int {
+    private fun getHierarchyLevel(
+        hierarchicEntity: HierarchicEntity,
+        listItems: ArrayList<HierarchicEntity>
+    ): Int {
+
         var entity: HierarchicEntity? = hierarchicEntity
         var hierarchyLevel = 0
-        while (entity?.parentItemName != null) {
+        while (entity?.parentId != null) {
             hierarchyLevel++
-            entity = listItems.firstOrNull { it.name == entity?.parentItemName }
+            entity = listItems.firstOrNull { it.id == entity?.parentId }
         }
         return hierarchyLevel
     }
@@ -74,10 +72,11 @@ class HierarchicViewAdapter(
         hierarchicEntity: HierarchicEntity,
         listItems: ArrayList<HierarchicEntity>
     ) {
+
         val updatedListItems = if (hierarchicEntity.isExpanded) {
-            collapseHierarchicEntities(hierarchicEntity, listItems)
+            collapseHierarchicEntities(hierarchicEntity = hierarchicEntity, listItems = listItems)
         } else {
-            expandHierarchicEntities(hierarchicEntity, listItems)
+            expandHierarchicEntities(hierarchicEntity = hierarchicEntity, listItems = listItems)
         }
         processedHierarchicList = updatedListItems
         notifyDataSetChanged()
@@ -89,9 +88,11 @@ class HierarchicViewAdapter(
     ): ArrayList<HierarchicEntity> {
 
         hierarchicEntity.isExpanded = true
+        val expandedItems = ArrayList(hierarchicList.filter { it.parentId == hierarchicEntity.id })
+        expandedItems.forEach { it.isExpanded = false }
         listItems.addAll(
             listItems.indexOf(hierarchicEntity) + 1,
-            ArrayList(hierarchicList.filter { it.parentItemName == hierarchicEntity.name })
+            expandedItems
         )
         return listItems
     }
@@ -102,23 +103,29 @@ class HierarchicViewAdapter(
     ): ArrayList<HierarchicEntity> {
 
         hierarchicEntity.isExpanded = false
-        val namesToEliminate: ArrayList<String> = ArrayList(
-            listItems.filter { it.parentItemName == hierarchicEntity.name }
-                .map { it.name }
+
+        val idsToEliminate = ArrayList<String>()
+
+        idsToEliminate.addAll(ArrayList(
+            listItems.filter { it.parentId == hierarchicEntity.id }
+                .map { it.id }
                 .distinct()
-        )
-        namesToEliminate.addAll(ArrayList(
-            listItems.filter { namesToEliminate.contains(it.parentItemName) }
-                .map { it.name }
-                .distinct()))
-        return ArrayList(listItems.filter { !namesToEliminate.contains(it.name) })
+        ))
+
+        var beforeCount = -1
+        while (beforeCount != idsToEliminate.size) {
+            beforeCount = idsToEliminate.size
+            idsToEliminate.addAll(ArrayList(
+                listItems.filter { idsToEliminate.contains(it.parentId) && !idsToEliminate.contains(it.id) }
+                    .map { it.id }
+                    .distinct()))
+        }
+
+        return ArrayList(listItems.filter { !idsToEliminate.contains(it.id) })
     }
 
     private fun hasChildren(
         hierarchicEntity: HierarchicEntity,
         listItems: ArrayList<HierarchicEntity>
-    ): Boolean {
-
-        return !listItems.filter { it.parentItemName == hierarchicEntity.name }.isNullOrEmpty()
-    }
+    ) = !listItems.filter { it.parentId == hierarchicEntity.id }.isNullOrEmpty()
 }

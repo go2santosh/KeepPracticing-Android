@@ -33,19 +33,30 @@ class ContentsActivity : Activity() {
             .map { it.grade!! }
             .distinct()
             .map { grade ->
-                arrayList.add(HierarchicEntity(grade))
+                val gradeEntity = HierarchicEntity(name = grade)
+                arrayList.add(gradeEntity)
                 QuizContentsDataProvider.topics
                     .filter { it.grade == grade }
                     .map { it.subject!! }
                     .distinct()
                     .map { subject ->
-                        arrayList.add(HierarchicEntity(subject, grade))
+                        val subjectEntity = HierarchicEntity(name = subject, parentId = gradeEntity.id)
+                        arrayList.add(subjectEntity)
                         QuizContentsDataProvider.topics
                             .filter { it.grade == grade && it.subject == subject }
-                            .map { it.topic!! }
+                            .map { it.domain!! }
                             .distinct()
-                            .map { topic ->
-                                arrayList.add(HierarchicEntity(topic, subject))
+                            .map { domain ->
+                                val domainEntity = HierarchicEntity(name = domain, parentId = subjectEntity.id)
+                                arrayList.add(domainEntity)
+                                QuizContentsDataProvider.topics
+                                    .filter { it.grade == grade && it.subject == subject && it.domain == domain }
+                                    .map { it.topic!! }
+                                    .distinct()
+                                    .map { topic ->
+                                        val topicEntity = HierarchicEntity(name = topic, parentId = domainEntity.id)
+                                        arrayList.add(topicEntity)
+                                    }
                             }
                     }
             }
