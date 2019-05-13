@@ -3,6 +3,7 @@ package com.go2santosh.keeppracticing.models.quiz
 import java.util.*
 
 class QuizProvider(
+    val quizFileName: String,
     val progressHandler: (message: String) -> Unit,
     val questionHandler: (question: String, keyboard: String) -> Unit,
     val quizTimerHandler: (remainingSeconds: Int) -> Unit,
@@ -20,6 +21,7 @@ class QuizProvider(
     private var notAttempted = 0
     private var correct = 0
     private var incorrect = 0
+    private val quizDataProvider = QuizDataProvider(dataFileName = "data/$quizFileName")
 
     internal var isCompleted = false
 
@@ -67,9 +69,12 @@ class QuizProvider(
 
     private fun resumeQuiz() {
         currentQuestionIndex++
-        if (currentQuestionIndex in QuizDataProvider.questions.indices) {
+        if (currentQuestionIndex in quizDataProvider.questions.indices) {
             progressHandler(getProgress())
-            questionHandler(QuizDataProvider.questions[currentQuestionIndex].question!!, QuizDataProvider.questions[currentQuestionIndex].keyboard!!)
+            questionHandler(
+                quizDataProvider.questions[currentQuestionIndex].question!!,
+                quizDataProvider.questions[currentQuestionIndex].keyboard!!
+            )
             startTimer()
         } else {
             finishQuiz()
@@ -83,12 +88,12 @@ class QuizProvider(
     }
 
     private fun checkAnswers(answers: List<String>) {
-        if (currentQuestionIndex in QuizDataProvider.questions.indices) {
+        if (currentQuestionIndex in quizDataProvider.questions.indices) {
             val validAnswers = answers.filter { answer -> !answer.isBlank() }
             if (validAnswers.isEmpty()) {
                 notAttempted++
             } else {
-                val question = QuizDataProvider.questions[currentQuestionIndex]
+                val question = quizDataProvider.questions[currentQuestionIndex]
                 var allMatched = true
                 for (i in 0..question.answers.lastIndex) {
                     allMatched = question.answers[i] == answers[i]

@@ -10,27 +10,32 @@ import android.view.View
 
 class QuizActivity : Activity() {
 
-    private val quizProvider = QuizProvider(
-        progressHandler = { runOnUiThread { textViewProgress.text = it } },
-        questionHandler = { question, keyboard ->
-            runOnUiThread {
-                textViewQuestion.text = question
-                simpleKeyboard.setKeyboard(keyboard)
-            }
-        },
-        quizTimerHandler = { seconds ->
-            runOnUiThread {
-                textViewTimer.text = getString(R.string.timer_with_1_replacable).replace("$0", seconds.toString())
-            }
-        },
-        timeoutHandler = { runOnUiThread { timeout() } },
-        resultHandler = { notAttempted, correct, incorrect ->
-            runOnUiThread { showResult(notAttempted, correct, incorrect) }
-        })
+    private lateinit var quizProvider: QuizProvider
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
+
+        quizProvider = QuizProvider(
+            quizFileName = intent.getExtras().getString("quizFileName"),
+            progressHandler = { runOnUiThread { textViewProgress.text = it } },
+            questionHandler = { question, keyboard ->
+                runOnUiThread {
+                    textViewQuestion.text = question
+                    simpleKeyboard.setKeyboard(keyboard)
+                }
+            },
+            quizTimerHandler = { seconds ->
+                runOnUiThread {
+                    textViewTimer.text = getString(R.string.timer_with_1_replacable).replace("$0", seconds.toString())
+                }
+            },
+            timeoutHandler = { runOnUiThread { timeout() } },
+            resultHandler = { notAttempted, correct, incorrect ->
+                runOnUiThread { showResult(notAttempted, correct, incorrect) }
+            }
+        )
+
         buttonFinish.apply { setOnClickListener { finishQuiz() } }
         simpleKeyboard.setListeners({ textViewAnswer.text = it }, { submitAnswer() })
     }

@@ -6,10 +6,9 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.util.ArrayList
 
-object QuizDataProvider {
+class QuizDataProvider(val dataFileName: String = "data/sample_questions.json") {
 
-    private const val logMessageSource = "QuizDataProvider"
-    private const val dataFileName = "data/sample_questions.json"
+    private val logMessageSource = "QuizDataProvider"
 
     var questions: ArrayList<QuestionEntity> = ArrayList()
 

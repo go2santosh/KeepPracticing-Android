@@ -1,6 +1,7 @@
 package com.go2santosh.keeppracticing.userinterfaces.contents
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import com.go2santosh.keeppracticing.R
 import com.go2santosh.keeppracticing.models.quizcontents.QuizContentsDataProvider
@@ -9,8 +10,10 @@ import android.widget.Toast
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.DefaultItemAnimator
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.go2santosh.keeppracticing.userinterfaces.QuizActivity
 
 class ContentsActivity : Activity() {
 
@@ -23,14 +26,18 @@ class ContentsActivity : Activity() {
 
         val imageView: ImageView = itemView.findViewById(R.id.imageViewExpandIcon)
         val textView: TextView = itemView.findViewById(R.id.textViewSubject)
+        val buttonStart: Button = itemView.findViewById(R.id.buttonStart)
         if (hasChildren(hierarchicEntity = hierarchicEntity, listItems = hierarchicList)) {
             imageView.visibility = View.VISIBLE
+            buttonStart.visibility = View.INVISIBLE
             if (hierarchicEntity.isExpanded)
                 imageView.setImageDrawable(resources.getDrawable(R.drawable.ic_expand_less))
             else
                 imageView.setImageDrawable(resources.getDrawable(R.drawable.ic_expand_more))
         } else {
             imageView.visibility = View.INVISIBLE
+            buttonStart.visibility = View.VISIBLE
+            buttonStart.apply { setOnClickListener { startQuiz(hierarchicEntity) } }
         }
         imageView.setPadding(
             resources.getDimension(R.dimen.padding_large).toInt() *
@@ -113,5 +120,21 @@ class ContentsActivity : Activity() {
                     }
             }
         return arrayList
+    }
+
+    private fun startQuiz(hierarchicEntity: HierarchicEntity) {
+        val domainHierarchicEntity = hierarchicList.first { it.id == hierarchicEntity.parentId }
+        val subjectHierarchicEntity = hierarchicList.first { it.id == domainHierarchicEntity.parentId }
+        val gradeHierarchicEntity = hierarchicList.first { it.id == subjectHierarchicEntity.parentId }
+        val quizFileName = QuizContentsDataProvider.topics.first {
+            it.grade == gradeHierarchicEntity.name
+                    && it.subject == subjectHierarchicEntity.name
+                    && it.domain == domainHierarchicEntity.name
+                    && it.topic == hierarchicEntity.name }.quizFileName
+
+        val intent = Intent(applicationContext, QuizActivity::class.java)
+        intent.putExtra("quizFileName", quizFileName)
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }

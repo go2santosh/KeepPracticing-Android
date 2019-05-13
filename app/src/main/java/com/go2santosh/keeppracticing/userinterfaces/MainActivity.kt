@@ -13,15 +13,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textViewCaption.text = getString(R.string.keep_practicing)
-        buttonStart.text = getString(R.string.start)
-        buttonStart.apply { setOnClickListener { startQuiz() } }
         buttonExploreContents.apply { setOnClickListener { startContents() } }
-    }
-
-    private fun startQuiz() {
-        val intent = Intent(applicationContext, QuizActivity::class.java)
-        startActivity(intent)
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 
     private fun startContents() {

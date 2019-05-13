@@ -18,6 +18,18 @@
             android:textSize="@dimen/text_size_medium"
             android:textColor="@color/colorPrimary"
             android:padding="@dimen/padding_small"
-            android:text="Subject"/>
+            android:text="Subject" android:layout_weight="1"/>
+
+    <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:textSize="@dimen/text_size_small"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            style="?borderlessButtonStyle"/>
 
 </LinearLayout>
