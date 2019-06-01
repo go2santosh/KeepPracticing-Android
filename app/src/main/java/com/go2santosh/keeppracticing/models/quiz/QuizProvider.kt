@@ -4,7 +4,7 @@ import java.util.*
 
 class QuizProvider(
     val quizFileName: String,
-    val progressHandler: (message: String) -> Unit,
+    val progressHandler: (currentQuestionNumber: Int, totalQuestions: Int, totalCorrectAnswers: Int, totalIncorrectAnswers: Int, totalNotAttempted: Int) -> Unit,
     val questionHandler: (question: String, keyboard: String) -> Unit,
     val quizTimerHandler: (remainingSeconds: Int) -> Unit,
     val timeoutHandler: () -> Unit,
@@ -37,10 +37,6 @@ class QuizProvider(
         resumeQuiz()
     }
 
-    private fun getProgress(): String {
-        return "Question ${currentQuestionIndex + 1} | Correct $correct | Incorrect $incorrect | Not Attempted $notAttempted"
-    }
-
     private fun startTimer() {
         timerTimeoutCountdown = defaultTimerTimeout
         timer = Timer("alertTimer", true)
@@ -70,7 +66,13 @@ class QuizProvider(
     private fun resumeQuiz() {
         currentQuestionIndex++
         if (currentQuestionIndex in quizDataProvider.questions.indices) {
-            progressHandler(getProgress())
+            progressHandler(
+                currentQuestionIndex + 1,
+                quizDataProvider.questions.size,
+                correct,
+                incorrect,
+                notAttempted
+            )
             questionHandler(
                 quizDataProvider.questions[currentQuestionIndex].question!!,
                 quizDataProvider.questions[currentQuestionIndex].keyboard!!

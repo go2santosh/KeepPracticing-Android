@@ -1,24 +1,41 @@
 package com.go2santosh.keeppracticing.userinterfaces
 
-import android.app.Activity
 import android.os.Bundle
 import com.go2santosh.keeppracticing.R
 import com.go2santosh.keeppracticing.models.quiz.QuizProvider
 import kotlinx.android.synthetic.main.activity_quiz.*
 import android.animation.ObjectAnimator
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 
-class QuizActivity : Activity() {
+class QuizActivity : AppCompatActivity() {
 
     private lateinit var quizProvider: QuizProvider
+    private val quizStatusFragment: QuizStatusFragment = QuizStatusFragment.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.layoutQuizStatus, quizStatusFragment, "quizStatus")
+                .commit()
+        }
+
+        buttonFinish.apply { setOnClickListener { finishQuiz() } }
+        simpleKeyboard.setListeners({ textViewAnswer.text = it }, { submitAnswer() })
+    }
+
+    override fun onStart() {
+        super.onStart()
+
         quizProvider = QuizProvider(
             quizFileName = intent.getExtras().getString("quizFileName"),
-            progressHandler = { runOnUiThread { textViewProgress.text = it } },
+            progressHandler = { currentQuestionNumber: Int, totalQuestions: Int, totalCorrectAnswers: Int, totalIncorrectAnswers: Int, totalNotAttempted: Int ->
+                runOnUiThread { quizStatusFragment.setProgress(currentQuestionNumber, totalQuestions, totalCorrectAnswers, totalIncorrectAnswers, totalNotAttempted) }
+            },
             questionHandler = { question, keyboard ->
                 runOnUiThread {
                     textViewQuestion.text = question
@@ -27,7 +44,7 @@ class QuizActivity : Activity() {
             },
             quizTimerHandler = { seconds ->
                 runOnUiThread {
-                    textViewTimer.text = getString(R.string.timer_with_1_replacable).replace("$0", seconds.toString())
+                    quizStatusFragment.setTimer(seconds)
                 }
             },
             timeoutHandler = { runOnUiThread { timeout() } },
@@ -35,9 +52,6 @@ class QuizActivity : Activity() {
                 runOnUiThread { showResult(notAttempted, correct, incorrect) }
             }
         )
-
-        buttonFinish.apply { setOnClickListener { finishQuiz() } }
-        simpleKeyboard.setListeners({ textViewAnswer.text = it }, { submitAnswer() })
     }
 
     private fun timeout() {

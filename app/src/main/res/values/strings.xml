@@ -14,4 +14,7 @@
     <string name="quiz_completed_with_3_replacables">Quiz Completed!\n\nCorrect $0\nIncorrect $1\nNot Attempted $2</string>
     <string name="contents">Contents</string>
     <string name="explore_contents">Explore Contents</string>
+    <string name="quiz_status">Question $0 of $1 | Correct $2 | Incorrect $3 | Not Attempted $4</string>
+    <string name="quiz_timer_status">Timer: $0</string>
+    <string name="topic">Topic</string>
 </resources>

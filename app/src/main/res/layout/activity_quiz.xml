@@ -23,7 +23,7 @@
                       android:orientation="horizontal">
 
             <TextView
-                    android:id="@+id/textViewProgress"
+                    android:id="@+id/textViewTopic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_size_medium"
@@ -31,7 +31,7 @@
                     android:textColor="@color/colorPrimaryContrast"
                     android:gravity="end"
                     android:textAlignment="center"
-                    android:text="@string/sample_progress_value"
+                    android:text="@string/topic"
                     android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
@@ -42,16 +42,6 @@
                 android:background="@color/colorPrimary"
                 android:orientation="horizontal"
                 android:gravity="end">
-
-            <TextView
-                    android:id="@+id/textViewTimer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/text_size_medium"
-                    android:padding="@dimen/padding_small"
-                    android:textColor="@color/colorPrimaryContrast"
-                    android:text="@string/sample_timer_value"
-                    android:layout_gravity="center_vertical"/>
 
             <Button
                     android:id="@+id/buttonFinish"
@@ -67,6 +57,12 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/layoutQuizStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"/>
 
     <LinearLayout
             android:id="@+id/layoutQuestion"
