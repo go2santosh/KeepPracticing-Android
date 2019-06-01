@@ -126,14 +126,15 @@ class ContentsActivity : Activity() {
         val domainHierarchicEntity = hierarchicList.first { it.id == hierarchicEntity.parentId }
         val subjectHierarchicEntity = hierarchicList.first { it.id == domainHierarchicEntity.parentId }
         val gradeHierarchicEntity = hierarchicList.first { it.id == subjectHierarchicEntity.parentId }
-        val quizFileName = QuizContentsDataProvider.topics.first {
+        val quizTopic = QuizContentsDataProvider.topics.first {
             it.grade == gradeHierarchicEntity.name
                     && it.subject == subjectHierarchicEntity.name
                     && it.domain == domainHierarchicEntity.name
-                    && it.topic == hierarchicEntity.name }.quizFileName
-
+                    && it.topic == hierarchicEntity.name
+        }
         val intent = Intent(applicationContext, QuizActivity::class.java)
-        intent.putExtra("quizFileName", quizFileName)
+        intent.putExtra("quizTopic", quizTopic.topic)
+        intent.putExtra("quizFileName", quizTopic.quizFileName)
         startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }

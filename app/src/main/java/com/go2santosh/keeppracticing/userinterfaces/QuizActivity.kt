@@ -31,6 +31,7 @@ class QuizActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
+        textViewTopic.text = intent.getExtras().getString("quizTopic")
         quizProvider = QuizProvider(
             quizFileName = intent.getExtras().getString("quizFileName"),
             progressHandler = { currentQuestionNumber: Int, totalQuestions: Int, totalCorrectAnswers: Int, totalIncorrectAnswers: Int, totalNotAttempted: Int ->
