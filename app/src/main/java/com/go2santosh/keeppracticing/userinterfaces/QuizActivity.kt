@@ -18,10 +18,7 @@ class QuizActivity : AppCompatActivity() {
         setContentView(R.layout.activity_quiz)
 
         if (savedInstanceState == null) {
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.layoutQuizStatus, quizStatusFragment, "quizStatus")
-                .commit()
+            addQuizStatusFragment()
         }
 
         buttonFinish.apply { setOnClickListener { finishQuiz() } }
@@ -61,6 +58,7 @@ class QuizActivity : AppCompatActivity() {
 
     private fun showResult(notAttempted: Int, correct: Int, incorrect: Int) {
         layoutQuestion.visibility = View.GONE
+        removeQuizStatusFragment()
         textViewResult.text = getString(R.string.quiz_completed_with_3_replacables)
             .replace("$0", correct.toString())
             .replace("$1", incorrect.toString())
@@ -90,5 +88,19 @@ class QuizActivity : AppCompatActivity() {
         val animation = ObjectAnimator.ofFloat(layoutQuestion, "rotationY", 0.0f, 360f)
         animation.duration = 500
         animation.start()
+    }
+
+    private fun addQuizStatusFragment() {
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.layoutQuizStatus, quizStatusFragment, "quizStatus")
+            .commit()
+    }
+
+    private fun removeQuizStatusFragment() {
+        supportFragmentManager
+            .beginTransaction()
+            .remove(quizStatusFragment)
+            .commit()
     }
 }
