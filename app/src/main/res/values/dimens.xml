@@ -10,4 +10,6 @@
     <dimen name="margin_large">32sp</dimen>
     <dimen name="margin_extra_large">64sp</dimen>
     <dimen name="navigation_layout_height">62sp</dimen>
+    <dimen name="radius_medium">10sp</dimen>
+    <dimen name="line_width_narrow">1sp</dimen>
 </resources>
