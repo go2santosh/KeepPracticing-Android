@@ -1,0 +1,96 @@
+{
+  "name": "7-digit and 8-digit numbers",
+  "questions": [
+    {
+      "question": "Rewrite the number 2509812 by placing commas at the appropriate places.",
+      "answers": ["25,09,812"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }, {
+      "question": "Rewrite the number 6525092 by placing commas at the appropriate places.",
+      "answers": ["65,25,092"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }, {
+      "question": "Rewrite the number 6078094 by placing commas at the appropriate places.",
+      "answers": ["60,78,094"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }, {
+      "question": "Rewrite the number 47215058 by placing commas at the appropriate places.",
+      "answers": ["4,72,15,058"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }, {
+      "question": "What is the place value of digit-7 in 7,54,098?\n(A) Seven\n(B) One Lakh\n(C) Seven Lakh\n(D) Seventy Lakh",
+      "answers": ["C"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the place value of digit-2 in 25,00,069?\n(A) Two\n(B) Two Lakh\n(C) Twenty Lakh\n(D) Twenty Five Lakh",
+      "answers": ["C"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the place value of digit-1 in 1,49,33,254?\n(A) One\n(B) One Thousand\n(C) One Lakh\n(D) One Crore",
+      "answers": ["D"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the place value of digit-6 in 5,65,54,454?\n(A) Six\n(B) Sixty Thousand\n(C) Six Lakh\n(D) Sixty Lakhs",
+      "answers": ["D"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the number name of 45,890?\n(A) Forty-Five Hundred Eight Thousand Ninety\n(B) Four-Five Thousand Eight Hundred Ninety\n(C) Forty-Five Thousand Eight Hundred Ninety\n(D) Forty Five Lakh Eight Hundred Ninety",
+      "answers": ["C"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the number name of 3,56,900?\n(A) Three Hundred Fifty-Six Thousands Nine Hundred\n(B) Three Lakh Fifty-Six Thousand Nine Hundred\n(C) Three Thousand Fifty-Six Lakh Nine Hundred\n(D) Three Lakh Fifty-Six Hundred Nine Thousand",
+      "answers": ["B"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the number name of 6,74,008?\n(A) 6 Lakh 74 Thousand 8\n(B) Six Lakh Seventy-Four Thousand Eight\n(C) Six Lakh Seventy-Four Thousand Eight Hundred\n(D) Six Hundred Seventy-Four Thousand Eight",
+      "answers": ["B"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the number name of 5,34,90,099?\n(A) 5 Crore 34 Lakh 90 Thousand 99\n(B) Five Hundred Thirty-Four Lakh Ninety Thousand Ninety-Nine\n(C) Five Crore Thirty-Four Lakh Ninety Thousand Ninety-Nine Hundred\n(D) Five Crore Thirty-Four Lakh Ninety Thousand Ninety-Nine",
+      "answers": ["D"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the numeral of Sixty-two lakh seventy-five thousand four hundred nineteen?\n(A) 62,75,419\n(B) 62,75,04,19\n(C) 62,754,99\n(D) 62,75,4,19",
+      "answers": ["A"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "What is the numeral of Thirty-four lakh twenty-six thousand nine hundred nine?\n(A) 34,26,9,9\n(B) 34,26,09,09\n(C) 340,260,909\n(D) 34,26,909",
+      "answers": ["D"],
+      "keyboard": "options_a_b_c_d_only",
+      "timeout": 60
+    }, {
+      "question": "Write the numeral of Seventy-five lakh two thousand four hundred sixteen.",
+      "answers": ["75,02,416"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }, {
+      "question": "Write the numeral of Nine lakh eighteen thousand two hundred four.",
+      "answers": ["9,18,204"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }, {
+      "question": "Write the numeral of Seven crore ninety-one lakh twenty thousand five hundred sixty-nine.",
+      "answers": ["7,91,20,569"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }, {
+      "question": "Write the numeral of Nine crore forty-seven lakh six hundred twenty.",
+      "answers": ["9,47,00,620"],
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 90
+    }
+  ]
+}

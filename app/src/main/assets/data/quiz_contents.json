@@ -11,48 +11,6 @@
     "subject": "Mathematics",
     "domain": "Large Numbers",
     "topic": "7-digit and 8-digit numbers",
-    "quizFileName": "sample_questions.json"
-  },
-  {
-    "grade": "Grade-5",
-    "subject": "Mathematics",
-    "domain": "Large Numbers",
-    "topic": "9-digit numbers",
-    "quizFileName": "sample_questions.json"
-  },
-  {
-    "grade": "Grade-5",
-    "subject": "Mathematics",
-    "domain": "Large Numbers",
-    "topic": "Understanding face value and place value",
-    "quizFileName": "sample_questions.json"
-  },
-  {
-    "grade": "Grade-5",
-    "subject": "Mathematics",
-    "domain": "Large Numbers",
-    "topic": "Indian and International systems of numeration",
-    "quizFileName": "sample_questions.json"
-  },
-  {
-    "grade": "Grade-5",
-    "subject": "Mathematics",
-    "domain": "The Four Fundamental Operations",
-    "topic": "Addition of larger numbers",
-    "quizFileName": "sample_questions.json"
-  },
-  {
-    "grade": "Grade-5",
-    "subject": "Mathematics",
-    "domain": "The Four Fundamental Operations",
-    "topic": "Subtraction of larger numbers",
-    "quizFileName": "sample_questions.json"
-  },
-  {
-    "grade": "Grade-5",
-    "subject": "Mathematics",
-    "domain": "The Four Fundamental Operations",
-    "topic": "Multiplication",
-    "quizFileName": "sample_questions.json"
+    "quizFileName": "grade5_mathematics_7digit_and_8digit_numbers.json"
   }
 ]

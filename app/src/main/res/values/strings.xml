@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KeepPracticing</string>
+    <string name="app_name">Keep Practicing</string>
     <string name="keep_practicing">Keep Practicing!</string>
     <string name="start">Start</string>
     <string name="sample_progress_value">Question 1 of 10</string>
