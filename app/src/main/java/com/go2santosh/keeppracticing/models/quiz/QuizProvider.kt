@@ -13,7 +13,7 @@ class QuizProvider(
 
     private val timerDelay = 0L
     private val timerPeriod = 1000L
-    private val defaultTimerTimeout = 60
+    private val defaultTimerTimeout = 90
 
     private var timer = Timer()
     private var timerTimeoutCountdown = defaultTimerTimeout
@@ -38,7 +38,8 @@ class QuizProvider(
     }
 
     private fun startTimer() {
-        timerTimeoutCountdown = defaultTimerTimeout
+        val questionTimeout = quizDataProvider.questions[currentQuestionIndex].timeout ?: defaultTimerTimeout
+        timerTimeoutCountdown = if (questionTimeout > 0) questionTimeout else defaultTimerTimeout
         timer = Timer("alertTimer", true)
         timer.scheduleAtFixedRate(
             object : TimerTask() {

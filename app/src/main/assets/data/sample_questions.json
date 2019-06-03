@@ -4,7 +4,8 @@
     {
       "question": "Rewrite the number 2509812 by placing commas at the appropriate places.",
       "answers": ["25,09,812"],
-      "keyboard": "digits_comma_dot_only"
+      "keyboard": "digits_comma_dot_only",
+      "timeout": 60
     }, {
       "question": "Rewrite the number 6525092 by placing commas at the appropriate places.",
       "answers": ["65,25,092"],

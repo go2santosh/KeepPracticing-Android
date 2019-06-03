@@ -6,6 +6,7 @@ class QuestionEntity(json: String) : JSONObject(json) {
     internal val question: String? = this.optString("question")
     internal val answers = ArrayList<String>()
     internal val keyboard: String? = this.optString("keyboard")
+    internal val timeout: Int? = this.optInt("timeout")
 
     init {
         val jsonArray = this.optJSONArray("answers")
