@@ -21,11 +21,12 @@ class QuizProvider(
     private var notAttempted = 0
     private var correct = 0
     private var incorrect = 0
-    private val quizDataProvider = QuizDataProvider(dataFileName = "data/$quizFileName")
+    private val quizQuestions: ArrayList<QuestionEntity> = QuizDataProvider(dataFileName = "data/$quizFileName").questions
 
     internal var isCompleted = false
 
     init {
+        quizQuestions.shuffle()
         startQuiz()
     }
 
@@ -38,7 +39,7 @@ class QuizProvider(
     }
 
     private fun startTimer() {
-        val questionTimeout = quizDataProvider.questions[currentQuestionIndex].timeout ?: defaultTimerTimeout
+        val questionTimeout = quizQuestions[currentQuestionIndex].timeout ?: defaultTimerTimeout
         timerTimeoutCountdown = if (questionTimeout > 0) questionTimeout else defaultTimerTimeout
         timer = Timer("alertTimer", true)
         timer.scheduleAtFixedRate(
@@ -66,17 +67,17 @@ class QuizProvider(
 
     private fun resumeQuiz() {
         currentQuestionIndex++
-        if (currentQuestionIndex in quizDataProvider.questions.indices) {
+        if (currentQuestionIndex in quizQuestions.indices) {
             progressHandler(
                 currentQuestionIndex + 1,
-                quizDataProvider.questions.size,
+                quizQuestions.size,
                 correct,
                 incorrect,
                 notAttempted
             )
             questionHandler(
-                quizDataProvider.questions[currentQuestionIndex].question!!,
-                quizDataProvider.questions[currentQuestionIndex].keyboard!!
+                quizQuestions[currentQuestionIndex].question!!,
+                quizQuestions[currentQuestionIndex].keyboard!!
             )
             startTimer()
         } else {
@@ -91,12 +92,12 @@ class QuizProvider(
     }
 
     private fun checkAnswers(answers: List<String>) {
-        if (currentQuestionIndex in quizDataProvider.questions.indices) {
+        if (currentQuestionIndex in quizQuestions.indices) {
             val validAnswers = answers.filter { answer -> !answer.isBlank() }
             if (validAnswers.isEmpty()) {
                 notAttempted++
             } else {
-                val question = quizDataProvider.questions[currentQuestionIndex]
+                val question = quizQuestions[currentQuestionIndex]
                 var allMatched = true
                 for (i in 0..question.answers.lastIndex) {
                     allMatched = question.answers[i] == answers[i]
