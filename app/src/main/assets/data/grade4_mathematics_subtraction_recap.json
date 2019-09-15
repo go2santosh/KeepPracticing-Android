@@ -1,0 +1,29 @@
+{
+  "name": "Subtraction Recap Exercise",
+  "questions": [
+    {
+      "question": "78,965 - 23,542 = ?",
+      "answers": ["55,423"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "96,231 - 80,512 = ?",
+      "answers": ["15,719"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "90,623 - 23,575 = ?",
+      "answers": ["67,048"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "75,689 - 46,276 = ?",
+      "answers": ["29,413"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "name": "Subtraction with Regrouping",
+  "questions": [
+    {
+      "question": "Find the difference between:\n76,286 and 46,041",
+      "answers": ["30,245"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n54,340 and 96,772",
+      "answers": ["42,432"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n53,410 and 85,679",
+      "answers": ["32,269"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n64,321 and 52,364",
+      "answers": ["11,957"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n4,98,326 and 59,487",
+      "answers": ["4,38,839"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n9,56,432 and 4,67,374",
+      "answers": ["4,89,058"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "96,547 - 23,214 = ?",
+      "answers": ["73,333"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "85,693 - 52,470 = ?",
+      "answers": ["33,223"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "6,32,581 - 4,10,260 = ?",
+      "answers": ["2,22,321"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "88,745 - 63,254 = ?",
+      "answers": ["25,491"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n2,85,679 and 1,03,864",
+      "answers": ["1,81,815"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n6,53,891 and 8,06,000",
+      "answers": ["1,52,199"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n9,87,000 and 3,94,819",
+      "answers": ["5,92,181"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference between:\n1,23,698 and 1,02,026",
+      "answers": ["21,672"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference if minuend = 96,325 and subtrahend = 45,201",
+      "answers": ["51,124"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "What number is 2,879 less than 12,000?",
+      "answers": ["9,121"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Subtract the sum of 35,879 and 29,874 from 9,99,999",
+      "answers": ["9,34,246"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Subtract forty eight thousand eight hundred twelve from one lakh four thousand six hundred eighty one",
+      "answers": ["55,869"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Subtract six lakh two thousand four hundred two from eight lakh twelve thousand nine hundred sixteen",
+      "answers": ["2,10,514"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

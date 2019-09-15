@@ -98,6 +98,27 @@
     "quizFileName": "grade4_mathematics_additions_estimating_sum.json"
   },
   {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Subtraction",
+    "topic": "Recap Exercise",
+    "quizFileName": "grade4_mathematics_subtraction_recap.json"
+  },
+  {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Subtraction",
+    "topic": "Subtraction with Regrouping",
+    "quizFileName": "grade4_mathematics_subtraction_with_regrouping.json"
+  },
+  {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Subtraction",
+    "topic": "Rules of Subtraction",
+    "quizFileName": "grade4_mathematics_subtraction_rules.json"
+  },
+  {
     "grade": "Grade-5",
     "subject": "Mathematics",
     "domain": "Large Numbers",

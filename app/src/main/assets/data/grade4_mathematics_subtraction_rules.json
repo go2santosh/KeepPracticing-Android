@@ -1,0 +1,89 @@
+{
+  "name": "Rules of Subtraction",
+  "questions": [
+    {
+      "question": "Fill in the blanks:\n45,693 - 0 = _______",
+      "answers": ["45,693"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n23,658 - 10 = _______",
+      "answers": ["23,648"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n78,963 - 1 = _______",
+      "answers": ["78,962"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n36,589 - 100 = _______",
+      "answers": ["36,489"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n______ - 1 = 56,987",
+      "answers": ["56,988"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n______ - 0 = 23,698",
+      "answers": ["23,698"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n______ - 0 = 23,698",
+      "answers": ["23,698"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n86,325 - 1,000 = _______",
+      "answers": ["85,325"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blanks:\n56,224 - 56,224 = _______",
+      "answers": ["0"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the incorrect subtraction fact for following addition fact:\n53,245 + 31,001 = 84,246\n\n(A)53,245 = 84,246 - 31,001\n(B)31,001 = 84,246 - 53,245\n(C)53,245 = 31,001 - 84,246",
+      "answers": ["C"],
+      "keyboard": "options_a_b_c_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the incorrect subtraction fact for following addition fact:\n21,685 + 61,125 = 82,810\n\n(A)21,685 = 61,125 - 82,810\n(B)61,125 = 82,810 - 21,685\n(C)21,685 = 82,810 - 61,125",
+      "answers": ["A"],
+      "keyboard": "options_a_b_c_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the correct subtraction fact for following addition fact:\n23,265 + 41,218 = 64,483\n\n(A)23,265 = 41,218 - 64,483\n(B)41,218 = 64,483 - 23,265\n(C)41,218 = 23,265 - 64,483",
+      "answers": ["B"],
+      "keyboard": "options_a_b_c_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the correct subtraction fact for following addition fact:\n31,151 + 52,916 = 84,067\n\n(A)31,151 = 52,916 - 84,067\n(B)31,151 = - 52,916 + 84,067\n(C)52,916 = 31,151 - 84,067",
+      "answers": ["B"],
+      "keyboard": "options_a_b_c_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the correct subtraction fact for following addition fact:\n2,98,605 + 5,01,131 = 7,99,736\n\n(A)2,98,605 = 7,99,736 - 5,01,131\n(B)2,98,605 = 5,01,131 - 7,99,736\n(C)5,01,131 = 2,98,605 - 7,99,736",
+      "answers": ["A"],
+      "keyboard": "options_a_b_c_only",
+      "timeout": 180
+    }
+  ]
+}
