@@ -33,11 +33,13 @@ class QuizStatusFragment: Fragment() {
     }
 
     fun setProgress(currentQuestionNumber: Int, totalQuestions: Int, totalCorrectAnswers: Int, totalIncorrectAnswers: Int, totalNotAttempted: Int) {
-        textViewStatus.text = getString(R.string.quiz_status)
-            .replace("$0", currentQuestionNumber.toString())
-            .replace("$1", totalQuestions.toString())
-            .replace("$2", totalCorrectAnswers.toString())
-            .replace("$3", totalIncorrectAnswers.toString())
-            .replace("$4", totalNotAttempted.toString())
+        if (textViewStatus != null) {
+            textViewStatus.text = getString(R.string.quiz_status)
+                .replace("$0", currentQuestionNumber.toString())
+                .replace("$1", totalQuestions.toString())
+                .replace("$2", totalCorrectAnswers.toString())
+                .replace("$3", totalIncorrectAnswers.toString())
+                .replace("$4", totalNotAttempted.toString())
+        }
     }
 }
