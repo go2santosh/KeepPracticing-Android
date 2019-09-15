@@ -14,11 +14,12 @@
     <TextView
             android:id="@+id/textViewSubject"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_medium"
             android:textColor="@color/colorPrimary"
             android:padding="@dimen/padding_small"
-            android:text="Subject" android:layout_weight="1"/>
+            android:text="Subject"
+            android:layout_weight="1"/>
 
     <Button
             android:id="@+id/buttonStart"
