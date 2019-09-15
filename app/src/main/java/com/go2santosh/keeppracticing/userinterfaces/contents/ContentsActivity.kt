@@ -40,7 +40,7 @@ class ContentsActivity : Activity() {
             buttonStart.apply { setOnClickListener { startQuiz(hierarchicEntity) } }
         }
         imageView.setPadding(
-            resources.getDimension(R.dimen.padding_large).toInt() *
+            resources.getDimension(R.dimen.padding_medium).toInt() *
                     getHierarchyLevel(hierarchicEntity = hierarchicEntity, listItems = hierarchicList),
             0,
             0,
