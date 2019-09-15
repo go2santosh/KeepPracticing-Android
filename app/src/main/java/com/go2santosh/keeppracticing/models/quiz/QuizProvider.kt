@@ -1,6 +1,7 @@
 package com.go2santosh.keeppracticing.models.quiz
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 class QuizProvider(
     val quizFileName: String,
@@ -8,7 +9,7 @@ class QuizProvider(
     val questionHandler: (question: String, keyboard: String) -> Unit,
     val quizTimerHandler: (remainingSeconds: Int) -> Unit,
     val timeoutHandler: () -> Unit,
-    val resultHandler: (notAttempted: Int, correct: Int, incorrect: Int) -> Unit
+    val resultHandler: (notAttempted: Int, correct: Int, incorrect: Int, replies: List<ReplyEntity>) -> Unit
 ) {
 
     private val timerDelay = 0L
@@ -22,6 +23,7 @@ class QuizProvider(
     private var correct = 0
     private var incorrect = 0
     private val quizQuestions: ArrayList<QuestionEntity> = QuizDataProvider(dataFileName = "data/$quizFileName").questions
+    private val replies = ArrayList<ReplyEntity>()
 
     internal var isCompleted = false
 
@@ -94,16 +96,19 @@ class QuizProvider(
     private fun checkAnswers(answers: List<String>) {
         if (currentQuestionIndex in quizQuestions.indices) {
             val validAnswers = answers.filter { answer -> !answer.isBlank() }
+            val question = quizQuestions[currentQuestionIndex]
             if (validAnswers.isEmpty()) {
                 notAttempted++
             } else {
-                val question = quizQuestions[currentQuestionIndex]
                 var allMatched = true
                 for (i in 0..question.answers.lastIndex) {
                     allMatched = question.answers[i] == answers[i]
                     if (!allMatched) break
                 }
                 if (allMatched) correct++ else incorrect++
+            }
+            if (question.question != null) {
+                replies.add(ReplyEntity(question = question.question, answers = question.answers, reply = answers))
             }
         }
     }
@@ -112,7 +117,7 @@ class QuizProvider(
         stopTimer()
         if (!isCompleted) {
             isCompleted = true
-            resultHandler(notAttempted, correct, incorrect)
+            resultHandler(notAttempted, correct, incorrect, replies)
         }
     }
 }

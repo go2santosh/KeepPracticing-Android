@@ -109,13 +109,11 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
             android:id="@+id/layoutResult"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/padding_small"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:padding="@dimen/padding_small">
 
         <TextView
                 android:id="@+id/textViewResult"
@@ -124,9 +122,8 @@
                 android:textSize="@dimen/text_size_medium"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:textColor="@color/colorPrimary"
-                android:textAlignment="center"
                 android:text="@string/quiz_completed_with_3_replacables"/>
 
-    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

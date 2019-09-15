@@ -5,8 +5,14 @@ import com.go2santosh.keeppracticing.R
 import com.go2santosh.keeppracticing.models.quiz.QuizProvider
 import kotlinx.android.synthetic.main.activity_quiz.*
 import android.animation.ObjectAnimator
+import android.os.Build
+import android.support.v4.text.HtmlCompat
 import android.support.v7.app.AppCompatActivity
+import android.text.Html
+import android.text.Spanned
 import android.view.View
+import com.go2santosh.keeppracticing.models.quiz.ReplyEntity
+import java.lang.StringBuilder
 
 class QuizActivity : AppCompatActivity() {
 
@@ -46,8 +52,8 @@ class QuizActivity : AppCompatActivity() {
                 }
             },
             timeoutHandler = { runOnUiThread { timeout() } },
-            resultHandler = { notAttempted, correct, incorrect ->
-                runOnUiThread { showResult(notAttempted, correct, incorrect) }
+            resultHandler = { notAttempted, correct, incorrect, replies ->
+                runOnUiThread { showResult(notAttempted, correct, incorrect, replies) }
             }
         )
     }
@@ -56,14 +62,51 @@ class QuizActivity : AppCompatActivity() {
         submitAnswer()
     }
 
-    private fun showResult(notAttempted: Int, correct: Int, incorrect: Int) {
+    private fun showResult(notAttempted: Int, correct: Int, incorrect: Int, replies: List<ReplyEntity>) {
         layoutQuestion.visibility = View.GONE
         removeQuizStatusFragment()
-        textViewResult.text = getString(R.string.quiz_completed_with_3_replacables)
-            .replace("$0", correct.toString())
-            .replace("$1", incorrect.toString())
-            .replace("$2", notAttempted.toString())
-            .trimIndent()
+        textViewResult.text = formatResult(notAttempted, correct, incorrect, replies)
+    }
+
+    private fun formatResult(notAttempted: Int, correct: Int, incorrect: Int, replies: List<ReplyEntity>): Spanned {
+        val report = StringBuilder()
+        report.apply {
+            append(getString(R.string.report_title))
+            append("<hr>")
+            append(getString(R.string.quiz_completed_with_3_replacables)
+                .replace("$0", correct.toString())
+                .replace("$1", incorrect.toString())
+                .replace("$2", notAttempted.toString())
+                .trimIndent())
+            replies.forEach {
+                append("<br>")
+                append("<b>Question:</b>")
+                append(fromCTextToHtml(it.question))
+                append("<br>")
+                append("<b>Correct Answer:</b>")
+                it.answers.forEach {
+                    append(it)
+                    append(".")
+                }
+                append("<br>")
+                append("<b>Your Reply:</b>")
+                it.reply.forEach {
+                    append(it)
+                    append(".")
+                }
+                append("<br>")
+            }
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(report.toString(), Html.FROM_HTML_MODE_LEGACY)
+        } else {
+            return HtmlCompat.fromHtml(report.toString(), HtmlCompat.FROM_HTML_MODE_LEGACY)
+        }
+    }
+
+    private fun fromCTextToHtml(text: String): String {
+        val htmlText = text.replace("\n", "<br>")
+        return htmlText
     }
 
     private fun getAnswers(): List<String> {

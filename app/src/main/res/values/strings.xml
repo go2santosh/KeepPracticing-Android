@@ -11,10 +11,11 @@
     <string name="delete">Delete</string>
     <string name="clear">Clear</string>
     <string name="timer_with_1_replacable">Timer: $0</string>
-    <string name="quiz_completed_with_3_replacables">Quiz Completed!\n\nCorrect $0\nIncorrect $1\nNot Attempted $2</string>
     <string name="contents">Contents</string>
     <string name="explore_contents">Explore Contents</string>
     <string name="quiz_status">Question $0 of $1 | Correct $2 | Incorrect $3 | Not Attempted $4</string>
     <string name="quiz_timer_status">Timer: $0</string>
     <string name="topic">Topic</string>
+    <string name="report_title"><![CDATA[<h3>YOUR QUIZ REPORT</h3>]]></string>
+    <string name="quiz_completed_with_3_replacables"><![CDATA[<p>Quiz Completed!<br>Correct $0<br>Incorrect $1<br>Not Attempted $2</p>]]></string>
 </resources>
