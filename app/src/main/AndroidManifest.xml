@@ -13,21 +13,28 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".userinterfaces.contents.ContentsActivity">
+        <activity
+                android:name=".userinterfaces.contents.ContentsActivity"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".userinterfaces.QuizActivity">
+        <activity
+                android:name=".userinterfaces.QuizActivity"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".userinterfaces.SplashActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                android:theme="@style/SplashTheme">
+                android:theme="@style/SplashTheme"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".userinterfaces.MainActivity">
+        <activity
+                android:name=".userinterfaces.MainActivity"
+                android:screenOrientation="portrait">
         </activity>
     </application>
 
