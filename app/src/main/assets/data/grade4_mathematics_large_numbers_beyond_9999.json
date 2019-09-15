@@ -1,0 +1,131 @@
+{
+  "name": "Numbers Beyond 9999",
+  "questions": [
+    {
+      "question": "Write the place value of 7 in the number 756320.",
+      "answers": ["700000"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the place value of 5 in the number 34569.",
+      "answers": ["500"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the place value of 2 in the number 96325.",
+      "answers": ["20"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the place value of 7 in the number 878625.",
+      "answers": ["70000"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number 23654 by placing commas.",
+      "answers": ["23,654"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number 96325 by placing commas.",
+      "answers": ["96,325"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number 403256 by placing commas.",
+      "answers": ["4,03,256"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number 356987 by placing commas.",
+      "answers": ["3,56,987"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write THIRTY-TWO THOUSAND FIVE HUNDRED AND SIXTEEN in number",
+      "answers": ["32516"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write SEVEN LAKH FOURTY-THREE THOUSAND AND SEVENTY-FIVE in number",
+      "answers": ["743075"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write EIGHTY-NINE THOUSAND EIGHT HUNDRED AND NINETY in number",
+      "answers": ["89890"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number smallest 5-digit number in words",
+      "answers": ["NINTY NINE THOUSAND NINE HUNDRED AND NINTY NINE"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the greatest 7-digit number",
+      "answers": ["9999999"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the missing number for the following number pattern:\n76594, 76694, 76794, _ _ _ _, 76994, 77094",
+      "answers": ["76894"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the missing number for the following number pattern:\n102359, 112359, 122359, 132359, _ _ _ _ _, 152359",
+      "answers": ["142359"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the missing number for the following number pattern:\n276102, 286102, _ _ _ _ _, 306102, 316102, 326102",
+      "answers": ["296102"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write four consecutive numbers coming just after 32065",
+      "answers": ["32066,32067,32068,32069"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write four consecutive numbers coming just before 23658",
+      "answers": ["23653,23654,23655,23656,23657"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the place value of the digit 5 for the number 56987",
+      "answers": ["50000"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the place value of the digit 8 for the number 56987",
+      "answers": ["80"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the digit whose place value is 6000 in the number 56987",
+      "answers": ["6"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    }
+  ]
+}

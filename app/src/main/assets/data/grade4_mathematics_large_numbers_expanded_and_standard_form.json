@@ -1,0 +1,47 @@
+{
+  "name": "Expanded Form and Standard Form",
+  "questions": [
+    {
+      "question": "Write the number 47,250 in expanded form",
+      "answers": ["40000+7000+200+50"],
+      "keyboard": "digits_plus_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number 7,52,953 in expanded form",
+      "answers": ["700000+50000+2000+900+50+3"],
+      "keyboard": "digits_plus_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number 64787 in expanded form",
+      "answers": ["60000+4000+700+80+7"],
+      "keyboard": "digits_plus_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the number 285905 in expanded form",
+      "answers": ["200000+80000+5000+900+5"],
+      "keyboard": "digits_plus_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following in standard form:\n7 x 100000 + 8 x 10000 + 2 x 1000 + 9 x 100 + 6 x 10 + 5 x 1",
+      "answers": ["7,82,965"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following in standard form:\n4 x 100000 + 2 x 10000 + 9 x 100 + 8 x 10 + 3 x 1",
+      "answers": ["4,20,983"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following in standard form:\n6 x 100000 + 8 x 10000 + 4 x 100 + 9 x 10",
+      "answers": ["6,80,490"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

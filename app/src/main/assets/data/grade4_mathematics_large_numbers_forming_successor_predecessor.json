@@ -1,0 +1,167 @@
+{
+  "name": "Forming Numbers, Successor and Predecessor",
+  "questions": [
+    {
+      "question": "Make the greatest number with the given digits:\n8, 6, 7, 3, 4, 1",
+      "answers": ["876431"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the smallest number with the given digits:\n8, 6, 7, 3, 4, 1",
+      "answers": ["134678"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the greatest number with the given digits:\n7, 1, 0, 3, 8, 9",
+      "answers": ["987310"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the smallest number with the given digits:\n7, 1, 0, 3, 8, 9",
+      "answers": ["103789"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the largest number with the given digits:\n4, 0, 8, 9, 1, 2, 3, 0",
+      "answers": ["98432100"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the smallest number with the given digits:\n4, 0, 8, 9, 1, 2, 3, 0",
+      "answers": ["10023489"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the largest number with the given digits:\n5, 6, 4, 7, 8, 9, 3",
+      "answers": ["9876543"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the smallest number with the given digits:\n5, 6, 4, 7, 8, 9, 3",
+      "answers": ["3456789"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the greatest 6-digit number using following digits and by repeating any 3 digits:\n7, 9, 5, 4",
+      "answers": ["999754"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the smallest 6-digit number using following digits and by repeating any 3 digits:\n7, 9, 5, 4",
+      "answers": ["444579"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the greatest 6-digit number using following digits and by repeating any 3 digits:\n3, 8, 0, 4",
+      "answers": ["888430"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the smallest 6-digit number using following digits and by repeating any 3 digits:\n3, 8, 0, 4",
+      "answers": ["300048"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the greatest 6-digit number using following digits and by repeating any 3 digits:\n6, 2, 9, 0",
+      "answers": ["999620"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Make the smallest 6-digit number using following digits and by repeating any 3 digits:\n6, 2, 9, 0",
+      "answers": ["200069"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "A publisher published 456987 books in the year 2001, 374569 books in the 2002, and 963258 books in 2003. In which year the publisher published the greatest number of books?",
+      "answers": ["2003"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "A publisher published 456987 books in the year 2001, 374569 books in the 2002, and 963258 books in 2003. In which year the publisher published the smallest number of books?",
+      "answers": ["2002"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Change the position of digits of the following number to make the greatest 5-digit number:\n56328",
+      "answers": ["86532"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Change the position of digits of the following number to make the greatest 5-digit number:\n17802",
+      "answers": ["87210"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Change the position of digits of the following number to make the greatest 5-digit number:\n74903",
+      "answers": ["97430"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write predecessor of 8,56,209",
+      "answers": ["8,56,208"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write successor of 8,56,209",
+      "answers": ["8,56,210"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write predecessor of 1,05,654",
+      "answers": ["1,05,653"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write successor of 1,05,654",
+      "answers": ["1,05,655"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write predecessor of 6,53,247",
+      "answers": ["6,53,246"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write successor of 6,53,247",
+      "answers": ["6,53,248"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the predecessor of the smallest 6-digit number",
+      "answers": ["99999"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the successor of the greatest 5-digit number",
+      "answers": ["100000"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    }
+  ]
+}

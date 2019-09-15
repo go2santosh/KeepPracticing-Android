@@ -1,0 +1,71 @@
+{
+  "name": "Rounding Off Numbers",
+  "questions": [
+    {
+      "question": "Round the following number to nearest 10:\n63",
+      "answers": ["60"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Round the following number to nearest 10:\n7,552",
+      "answers": ["7,550"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Round the following number to nearest 10:\n9,527",
+      "answers": ["9,530"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Round the following number to nearest 100:\n32,589",
+      "answers": ["32,600"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Round the following number to nearest 100:\n63,214",
+      "answers": ["63,200"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Round the following number to nearest 100:\n4,78,965",
+      "answers": ["4,79,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Round the following number to nearest 1000:\n63,254",
+      "answers": ["63,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Round the following number to nearest 1000:\n7,41,236",
+      "answers": ["7,41,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "The human body has 206 bones. Can it be rounded off to the nearest 100?\nAnswer Yes or No.",
+      "answers": ["YES"],
+      "keyboard": "yes_no",
+      "timeout": 180
+    },
+    {
+      "question": "School begins at 8 am. Can it be rounded off to the nearest 10?\nAnswer Yes or No.",
+      "answers": ["YES"],
+      "keyboard": "yes_no",
+      "timeout": 180
+    },
+    {
+      "question": "25 children were sent to the circus. Can it be rounded off to the nearest 10?\nAnswer Yes or No.",
+      "answers": ["YES"],
+      "keyboard": "yes_no",
+      "timeout": 180
+    }
+  ]
+}

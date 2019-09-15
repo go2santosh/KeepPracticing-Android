@@ -1,15 +1,80 @@
 [
   {
+    "name": "digits_only",
+    "configuration": {
+      "firstLineKeys":"0|1|2|3|4|5|6|7|8|9",
+      "secondLineKeys": "Delete|Submit"
+    }
+  },
+  {
+    "name": "digits_comma_only",
+    "configuration": {
+      "firstLineKeys":"1|2|3|4|5|6|7|8|9|0",
+      "secondLineKeys": ",|Delete|Submit"
+    }
+  },
+  {
+    "name": "digits_plus_only",
+    "configuration": {
+      "firstLineKeys":"1|2|3|4|5|6|7|8|9|0",
+      "secondLineKeys": "+|Delete|Submit"
+    }
+  },
+  {
     "name": "digits_comma_dot_only",
     "configuration": {
-      "firstLineKeys":"1|2|3|4|5|6|Delete",
-      "secondLineKeys": "7|8|9|0|,|.|Submit"
+      "firstLineKeys":"1|2|3|4|5|6|7|8|9|0",
+      "secondLineKeys": ",|.|Delete|Submit"
+    }
+  },
+  {
+    "name": "options_a_b_only",
+    "configuration": {
+      "firstLineKeys":"A|B",
+      "secondLineKeys": "Delete|Submit"
+    }
+  },
+  {
+    "name": "options_a_b_c_only",
+    "configuration": {
+      "firstLineKeys":"A|B|C",
+      "secondLineKeys": "Delete|Submit"
     }
   },
   {
     "name": "options_a_b_c_d_only",
     "configuration": {
       "firstLineKeys":"A|B|C|D",
+      "secondLineKeys": "Delete|Submit"
+    }
+  },
+  {
+    "name": "capital_alphabets",
+    "configuration": {
+      "firstLineKeys":"Q|W|E|R|T|Y|U|I|O|P",
+      "secondLineKeys": "A|S|D|F|G|H|J|K|L",
+      "thirdLineKeys": "Z|X|C|V|B|N|M",
+      "fourthLineKeys": " |Delete|Submit"
+    }
+  },
+  {
+    "name": "smaller_equal_greater",
+    "configuration": {
+      "firstLineKeys":"<|=|>",
+      "secondLineKeys": "Delete|Submit"
+    }
+  },
+  {
+    "name": "yes_no",
+    "configuration": {
+      "firstLineKeys":"YES|NO",
+      "secondLineKeys": "Delete|Submit"
+    }
+  },
+  {
+    "name": "roman_numeral",
+    "configuration": {
+      "firstLineKeys":"I|V|X|L|C|D|M",
       "secondLineKeys": "Delete|Submit"
     }
   }

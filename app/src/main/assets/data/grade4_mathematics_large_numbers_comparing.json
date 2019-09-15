@@ -1,0 +1,41 @@
+{
+  "name": "Comparing Numbers",
+  "questions": [
+    {
+      "question": "Choose the correct symbol to compare following numbers:\n96321 ____ 75632",
+      "answers": [">"],
+      "keyboard": "smaller_equal_greater",
+      "timeout": 180
+    },
+    {
+      "question": "Choose the correct symbol to compare following numbers:\n85632 ____ 856320",
+      "answers": ["<"],
+      "keyboard": "smaller_equal_greater",
+      "timeout": 180
+    },
+    {
+      "question": "Choose the correct symbol to compare following number:\n1992364 ____ 1993696",
+      "answers": ["<"],
+      "keyboard": "smaller_equal_greater",
+      "timeout": 180
+    },
+    {
+      "question": "Arrange following in descending order:\n20549, 19680, 54187, 65781",
+      "answers": ["65781,54187,20549,19680"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Arrange following in descending order:\n396452, 209586, 817492, 618045",
+      "answers": ["817492,618045,396452,209586"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Arrange following in ascending order:\n23658, 78965, 63254, 78966",
+      "answers": ["23658,63254,78965,78966"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

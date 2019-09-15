@@ -1,0 +1,71 @@
+{
+  "name": "Indian and International Systems of Numeration",
+  "questions": [
+    {
+      "question": "Write the following number in words as per Indian numeration:\n325047",
+      "answers": ["THREE LAKH TWENTY FIVE THOUSAND AND FORTY SEVEN"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number in words as per Indian numeration:\n447896",
+      "answers": ["FOUR LAKH FORTY SEVEN THOUSAND EIGHT HUNDRED AND NINETY SIX"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number in words as per Indian numeration:\n752368",
+      "answers": ["SEVEN LAKH FIFTY TWO THOUSAND THREE HUNDRED AND SIXTY EIGHT"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number in words as per Indian numeration:\n1478965",
+      "answers": ["FOURTEEN LAKH SEVENTY EIGHT THOUSAND NINE HUNDRED AND SIXTY FIVE"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number in words as per International numeration:\n652104",
+      "answers": ["SIX HUNDRED FIFTY TWO THOUSAND ONE HUNDRED AND FOUR"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number in words as per International numeration:\n412589",
+      "answers": ["FOUR HUNDRED TWELVE THOUSAND FIVE HUNDRED AND EIGHTY NINE"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number in words as per International numeration:\n602583",
+      "answers": ["SIX HUNDRED TWO THOUSAND FIVE HUNDRED AND EIGHTY THREE"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number in words as per International numeration:\n963258",
+      "answers": ["NINE HUNDRED SIXTY THREE THOUSAND TWO HUNDRED AND FIFTY EIGHT"],
+      "keyboard": "capital_alphabets",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number separating the periods with commas as per International numeration:\nTWO HUNDRED FOUR THOUSAND SIX HUNDRED AND ONE",
+      "answers": ["204,601"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number separating the periods with commas as per International numeration:\nONE MILLION TWO HUNDRED FOUR THOUSAND ONE HUNDRED AND ONE",
+      "answers": ["1,204,101"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the following number separating the periods with commas as per International numeration:\nSEVEN MILLION FOUR HUNDRED AND SEVEN",
+      "answers": ["7,000,407"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

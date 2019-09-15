@@ -1,0 +1,155 @@
+{
+  "name": "Roman Numerals",
+  "questions": [
+    {
+      "question": "Write the Roman numeral for the following number:\n36",
+      "answers": ["XXXVI"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Roman numeral for the following number:\n45",
+      "answers": ["XLV"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Roman numeral for the following number:\n359",
+      "answers": ["CCCLIX"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Roman numeral for the following number:\n198",
+      "answers": ["CXCVIII"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Roman numeral for the following number:\n88",
+      "answers": ["LXXXVIII"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Roman numeral for the following number:\n112",
+      "answers": ["CXII"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Hindu-Arabic numeral for the following Roman numeral:\nXIX",
+      "answers": ["19"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Hindu-Arabic numeral for the following Roman numeral:\nXLIV",
+      "answers": ["44"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Hindu-Arabic numeral for the following Roman numeral:\nXCV",
+      "answers": ["95"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Hindu-Arabic numeral for the following Roman numeral:\nCMXXXVIII",
+      "answers": ["938"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Hindu-Arabic numeral for the following Roman numeral:\nLVII",
+      "answers": ["57"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Hindu-Arabic numeral for the following Roman numeral:\nCDV",
+      "answers": ["405"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the Hindu-Arabic numeral for the following Roman numeral:\nCMXVI",
+      "answers": ["916"],
+      "keyboard": "digits_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the sum of the following and write answer in Roman numeral:\nXXX + XXIV",
+      "answers": ["LIV"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Find the sum of the following and write answer in Roman numeral:\nXIX + L",
+      "answers": ["LXIX"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Find the sum of the following and write answer in Roman numeral:\nXII + VIII + XXII",
+      "answers": ["XLII"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Find the sum of the following and write answer in Roman numeral:\nXXXIV + L",
+      "answers": ["LXXXIV"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference of the following and write answer in Roman numeral:\n40 - 20",
+      "answers": ["XX"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference of the following and write answer in Roman numeral:\n50 - 21",
+      "answers": ["XXIX"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference of the following and write answer in Roman numeral:\n50 - 19",
+      "answers": ["XXXI"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Find the difference of the following and write answer in Roman numeral:\n60 - 40",
+      "answers": ["XX"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank with Roman numeral:\nNovember has ______ days.",
+      "answers": ["XXX"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank with Roman numeral:\nFebruary has XXVIII or _____ days.",
+      "answers": ["XXIX"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank with Roman numeral:\nA person has _____ teeth.",
+      "answers": ["XXXII"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank with Roman numeral:\nA year has _____ weeks.",
+      "answers": ["LII"],
+      "keyboard": "roman_numeral",
+      "timeout": 180
+    }
+  ]
+}
