@@ -27,7 +27,9 @@ class QuizStatusFragment: Fragment() {
     }
 
     fun setTimer(seconds: Int) {
-        textViewQuizStatusTimer.text = getString(R.string.timer_with_1_replacable).replace("$0", seconds.toString())
+        if (textViewQuizStatusTimer != null) {
+            textViewQuizStatusTimer.text = getString(R.string.timer_with_1_replacable).replace("$0", seconds.toString())
+        }
     }
 
     fun setProgress(currentQuestionNumber: Int, totalQuestions: Int, totalCorrectAnswers: Int, totalIncorrectAnswers: Int, totalNotAttempted: Int) {
