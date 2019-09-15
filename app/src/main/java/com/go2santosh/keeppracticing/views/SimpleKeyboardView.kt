@@ -96,6 +96,24 @@ class SimpleKeyboardView(
         } else {
             viewGroupSecondLineKeys.visibility = View.GONE
         }
+        val thirdLineKeyValues = keyboard.configuration?.thirdLineKeys
+        if (!thirdLineKeyValues.isNullOrBlank()) {
+            addKeysToViewGroup(
+                thirdLineKeyValues,
+                viewGroupThirdLineKeys as LinearLayout
+            )
+        } else {
+            viewGroupThirdLineKeys.visibility = View.GONE
+        }
+        val fourthLineKeyValues = keyboard.configuration?.fourthLineKeys
+        if (!fourthLineKeyValues.isNullOrBlank()) {
+            addKeysToViewGroup(
+                fourthLineKeyValues,
+                viewGroupFourthLineKeys as LinearLayout
+            )
+        } else {
+            viewGroupFourthLineKeys.visibility = View.GONE
+        }
     }
 
     private fun addKeysToViewGroup(values: String, viewGroup: ViewGroup) {
