@@ -120,7 +120,7 @@ class SimpleKeyboardView(
         viewGroup.removeAllViews()
         val keyValues = values.split("|")
         keyValues.forEach { keyValue ->
-            val button = when (keyValue.trim()) {
+            val button = when (keyValue) {
                 "Submit" ->
                     createButton(
                         LayoutParams.WRAP_CONTENT,
@@ -172,7 +172,7 @@ class SimpleKeyboardView(
                         textSize.toFloat()
                     ).apply {
                         setOnClickListener {
-                            output = "$output${(it as Button).text}"
+                            output = getCorrectedText("$output${(it as Button).text}")
                             _textUpdateListener?.invoke(output)
                         }
                     }
@@ -190,9 +190,14 @@ class SimpleKeyboardView(
     ): Button {
         val button = Button(context)
         button.layoutParams = LayoutParams(width, height, weight)
-        button.text = text.trim()
+        button.text = text
         button.isAllCaps = isAllCaps
         button.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize)
         return button
+    }
+
+    private fun getCorrectedText(text: String): String {
+        val correctedText = text.replace("\\s+".toRegex(), " ")
+        return correctedText
     }
 }
