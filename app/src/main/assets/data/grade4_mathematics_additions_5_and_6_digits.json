@@ -1,0 +1,113 @@
+{
+  "name": "Addition of 5 and 6 digit Numbers",
+  "questions": [
+    {
+      "question": "71,569 + 26,420 = ?",
+      "answers": ["97,989"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "68,060 + 31,529 = ?",
+      "answers": ["99,589"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "42,367 + 53,612 = ?",
+      "answers": ["95,979"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "35,685 + 41,475 = ?",
+      "answers": ["77,160"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "63,439 + 23,842 = ?",
+      "answers": ["87,081"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "46,316 + 31,795 = ?",
+      "answers": ["78,111"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "4,24,217 + 1,39,215 + 40,258 = ?",
+      "answers": ["6,03,690"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "3,29,818 + 2,85,300 + 1,06,946 = ?",
+      "answers": ["7,22,064"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "2,56,427 + 1,09,285 + 45,300 = ?",
+      "answers": ["4,11,012"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "56,789 + 14,789 = ?",
+      "answers": ["71,578"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "23,654 + 5,741 = ?",
+      "answers": ["29,395"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "2,58,741 + 36,957 = ?",
+      "answers": ["2,95,698"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "3,69,852 + 42,321 + 14,562 = ?",
+      "answers": ["4,26,735"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "7,45,632 + 42,365 + 21,403 = ?",
+      "answers": ["8,09,400"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Find the sum of the largest 6-digit number and the smallest 5-digit number",
+      "answers": ["10,09,999"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add 33 thousands, 22 hundreds, and 47 tens",
+      "answers": ["35,670"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following numbers:\nFive lakh thirty six thousand nine hundred and eighty four; and thirty two thousand four hundred and fifteen",
+      "answers": ["5,69,399"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following numbers:\nNinety four thousand and forty seven; two lakh thirty seven hundred and eight; and sixty nine thousand five hundred and thirteen",
+      "answers": ["2,67,268"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

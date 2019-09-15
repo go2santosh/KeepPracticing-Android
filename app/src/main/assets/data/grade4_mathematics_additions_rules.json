@@ -1,0 +1,137 @@
+{
+  "name": "Rules of Addition",
+  "questions": [
+    {
+      "question": "Fill in the blank:\n3,24,569 + 47,856 = ________ + 3,24,569",
+      "answers": ["47,856"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n3,24,569 + 47,856 = 47,856 + ________",
+      "answers": ["3,24,569"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n6,32,140 + 1,21,365 = 1,21,365 + ________",
+      "answers": ["6,32,140"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n6,32,140 + 1,21,365 = ________ + 6,32,140",
+      "answers": ["1,21,365"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n3,25,416 + 2,47,856 = 2,47,856 + ________",
+      "answers": ["3,25,416"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n3,25,416 + 2,47,856 =  ________ + 3,25,416",
+      "answers": ["2,47,856"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n3,25,416 + 2,47,856 =  ________ + 3,25,416",
+      "answers": ["2,47,856"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Choose the correct option to fill in the blank:\n(31,244 + 23,419) + 41,695 = 31,244 + ________\n\n(A) (23,419 + 31,244)\n(B) (41,695 + 31,244)\n(C) (23,419 + 41,695)",
+      "answers": ["C"],
+      "keyboard": "options_a_b_c_only",
+      "timeout": 180
+    },
+    {
+      "question": "Choose the correct option to fill in the blank:\n53,206 + (24,714 + 6,692) = ________ + 6,692\n\n(A) (53,206 + 24,714)\n(B) (53,206 + 6,692)\n(C) (24,714 + 6,692)",
+      "answers": ["A"],
+      "keyboard": "options_a_b_c_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n27,165 + 0 + 8,369 = 27,165 + _______ + 8,369",
+      "answers": ["0"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n(3,381 + 76,863) + 4,123 = (76,863 + 4,123) + ______",
+      "answers": ["3,381"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n34,065 + (17,231 + 5,443) = 5,443 + (______ + 34,065)",
+      "answers": ["17,231"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n28,163 + (3,715 + 42,010) = 42,010 + (______ + 28,163)",
+      "answers": ["3,715"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Fill in the blank:\n52,343 + (35,363 + 68,313) = ______ + (52,343 + 35,363)",
+      "answers": ["68,313"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n25,631 + 1",
+      "answers": ["25,632"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n58,963 + 10",
+      "answers": ["58,973"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n74,569 + 100",
+      "answers": ["74,669"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n4,45,632 + 100",
+      "answers": ["4,45,732"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n8,56,324 + 1",
+      "answers": ["8,56,325"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n64,123 + 1000",
+      "answers": ["65,123"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n9,63,258 + 1,000",
+      "answers": ["9,634,258"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Add the following:\n9,96,324 + 0",
+      "answers": ["9,96,324"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

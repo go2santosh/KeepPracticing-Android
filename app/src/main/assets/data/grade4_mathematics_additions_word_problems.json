@@ -1,0 +1,47 @@
+{
+  "name": "Addition Word Problems",
+  "questions": [
+    {
+      "question": "In an entrance examination, 4,159 girls and 3,298 boys appeared. How many students did appear for the examination?",
+      "answers": ["7,457"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "In a school there are 1,024 students in grade 1 and 2, and 1,990 students in grades 3 and 4. Find the total number of students in the school.",
+      "answers": ["3,014"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "In an exhibition, 28,610 people visited on day one, 27,746 on day two, 6,809 on day 3, and 11,367 on day 4. Find the total number of people visited the exhibition.",
+      "answers": ["74,532"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "A garment factory manufactured 35,390 garments in January, 71,715 garments in February and 90,874 garments in March. How many garments were manufactured by the factory?",
+      "answers": ["197,979"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Rita's school has 20,356 students. Saroj's school which is 112 km away, has 12,145 students. How many students are there in both the schools altogether?",
+      "answers": ["32,501"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Raja took part in a car rally along with 797 other people. On the first day, he covered 485 km, the second day 398 km, and the third day 502 km. How much distance did he cover in all?",
+      "answers": ["1,385"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "There were 32,641 men watching a hockey match in a stadium. The capacity of the stadium is 80,000 people. There were also 21,645 women watching the match. How many people in all were there to watch the match?",
+      "answers": ["54,286"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

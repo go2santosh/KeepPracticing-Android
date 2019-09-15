@@ -1,0 +1,83 @@
+{
+  "name": "Additions Recap Exercise",
+  "questions": [
+    {
+      "question": "6,416 + 3,254 = ?",
+      "answers": ["9,670"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "2,708 + 5,142 = ?",
+      "answers": ["7,850"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "2,913 + 5,668 = ?",
+      "answers": ["8,581"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "3,549 + 2,843 + 1,564 = ?",
+      "answers": ["7,956"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "6,018 + 1,625 + 1,804 = ?",
+      "answers": ["9,447"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "5,632 + 1 = ?",
+      "answers": ["5,633"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "7,489 + 10 = ?",
+      "answers": ["7,499"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "9,652 + 100 = ?",
+      "answers": ["9,752"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "2,586 + 1000 = ?",
+      "answers": ["3,586"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the missing addend:\n800 + ____ = 1,500",
+      "answers": ["700"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the missing addend:\n2,500 + ____ = 6,000",
+      "answers": ["3,500"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the missing addend:\n300 + ____ + 300 = 1,800",
+      "answers": ["1,200"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Write the missing addend:\n3,500 + ____ + 1,000 = 9,000",
+      "answers": ["4,500"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}

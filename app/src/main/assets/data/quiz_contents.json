@@ -63,6 +63,41 @@
     "quizFileName": "grade4_mathematics_large_numbers_roman_numerals.json"
   },
   {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Additions",
+    "topic": "Recap Exercise",
+    "quizFileName": "grade4_mathematics_additions_recap.json"
+  },
+  {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Additions",
+    "topic": "Addition of 5 and 6 digit Numbers",
+    "quizFileName": "grade4_mathematics_additions_5_and_6_digits.json"
+  },
+  {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Additions",
+    "topic": "Rules of Addition",
+    "quizFileName": "grade4_mathematics_additions_rules.json"
+  },
+  {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Additions",
+    "topic": "Word Problems",
+    "quizFileName": "grade4_mathematics_additions_word_problems.json"
+  },
+  {
+    "grade": "Grade-4",
+    "subject": "Mathematics",
+    "domain": "Additions",
+    "topic": "Estimating the Sum",
+    "quizFileName": "grade4_mathematics_additions_estimating_sum.json"
+  },
+  {
     "grade": "Grade-5",
     "subject": "Mathematics",
     "domain": "Large Numbers",

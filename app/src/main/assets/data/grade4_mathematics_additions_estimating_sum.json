@@ -1,0 +1,59 @@
+{
+  "name": "Estimating the Sum",
+  "questions": [
+    {
+      "question": "Estimate the sum to nearest thousands:\n4,862 + 2,789",
+      "answers": ["8,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Estimate the sum to nearest thousands:\n7,456 + 6,532",
+      "answers": ["14,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Estimate the sum to nearest thousands:\n8,562 + 7,963",
+      "answers": ["17,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Estimate the sum to nearest thousands:\n2,314 + 4,123",
+      "answers": ["6,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Estimate the sum to nearest thousands:\n19,632 + 26,589",
+      "answers": ["47,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Estimate the sum to nearest thousands:\n47,852 + 24,786",
+      "answers": ["73,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Estimate the sum to nearest thousands:\n16,895 + 38,562",
+      "answers": ["56,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "Estimate the sum to nearest thousands:\n58,632 + 62,358",
+      "answers": ["121,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    },
+    {
+      "question": "A petrol pump sold 3,730 litres of petrol in a day 1, 2,531 litres of petrol on day 2, and 5,368 litres of petrol on day 3. Estimate the total number of litres of petrol the pump sold in 3 days.",
+      "answers": ["12,000"],
+      "keyboard": "digits_comma_only",
+      "timeout": 180
+    }
+  ]
+}
